@@ -1,0 +1,256 @@
+﻿body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f9f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb {
+    padding: 40px;
+    text-align: center;
+    background: #f2f1fc;
+}
+
+    .breadcrumb h1 {
+        margin-top: 10px;
+        color: #1a1a1a;
+    }
+
+    .breadcrumb p {
+        color: #666;
+    }
+
+    .breadcrumb span {
+        color: #ec4899;
+    }
+
+.product-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 200px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+    .thumbnails img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+.main-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.main-image {
+    display: grid;
+    align-items: center;
+}
+
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+    .product-details h2 {
+        font-size: 24px;
+        color: #1a1a1a;
+    }
+
+.rating {
+    margin: 10px 0;
+    color: #fbbf24;
+}
+
+.price {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+    .price .new {
+        color: #1a1a1a;
+        font-weight: bold;
+    }
+
+    .price .old {
+        color: #ef4444;
+        text-decoration: line-through;
+        margin-left: 10px;
+    }
+
+.description {
+    margin: 20px 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.order {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* khoảng cách giữa button và icon */
+}
+
+.add-to-cart {
+    padding: 10px 16px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.heart-icon {
+    font-size: 25px;
+    color: #ef4444;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+    .heart-icon:hover {
+        transform: scale(1.2);
+    }
+
+.meta p {
+    margin: 6px 0;
+}
+
+
+.product-tabs {
+    max-width: 1000px;
+    margin: 150px auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a4b;
+}
+
+.tabs {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+    .tabs li {
+        cursor: pointer;
+        padding-bottom: 10px;
+        font-weight: 500;
+        font-size: 25px;
+        color: #6366f1;
+    }
+
+        .tabs li.active {
+            font-weight: bold;
+            border-bottom: 2px solid #6366f1;
+        }
+
+.tab-content h3 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.tab-content p {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #4b4b6b;
+    margin-bottom: 20px;
+}
+
+.tab-content h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.details-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px;
+    color: #4b4b6b;
+}
+
+    .details-list li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+.arrow {
+    margin-right: 10px;
+    color: #6366f1;
+}
+
+
+.related-products {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .related-products h2 {
+        font-size: 22px;
+        color: #1a1a4b;
+        margin-bottom: 30px;
+    }
+
+.product-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 220px;
+    background: #fff;
+    text-align: left;
+}
+
+    .product-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .product-card h4 {
+        font-size: 16px;
+        color: #1a1a4b;
+        margin: 10px 0 5px;
+    }
+
+    .product-card p {
+        font-size: 14px;
+        color: #444;
+        margin: 0 0 5px;
+    }
+
+.stars {
+    color: #fbbf24;
+    font-size: 14px;
+}
+
+.desc {
+    padding: 5px;
+}

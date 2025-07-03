@@ -30,7 +30,7 @@ body {
 
 .main-header {
     background-color: #fff;
-    padding: 20px 50px;
+    padding: 0 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,6 +38,8 @@ body {
 }
 
 .logo {
+    width: 100px;
+    height: 100px;
     font-size: 32px;
     font-weight: bold;
     color: #000;
@@ -49,14 +51,14 @@ nav ul {
     gap: 30px;
 }
 
-nav ul li a {
-     text-decoration: none;
-     color: #000;
-     font-weight: bold;
-     position: relative;
-}
+    nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        position: relative;
+    }
 
-nav ul li a::after {
+        nav ul li a::after {
             content: "";
             position: absolute;
             width: 100%;
@@ -67,12 +69,13 @@ nav ul li a::after {
             transform: scaleX(0);
             transform-origin: right;
             transition: transform 0.3s ease-in-out;
-}
+        }
 
-nav ul li a:hover::after {
+        nav ul li a:hover::after {
             transform-origin: left;
             transform: scaleX(1);
-}
+        }
+
 
 .search-cart {
     display: flex;
