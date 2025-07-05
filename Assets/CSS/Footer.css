@@ -1,0 +1,131 @@
+﻿/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.footer {
+    font-family: Arial, sans-serif;
+    color: #555;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #f6f5ff;
+    padding: 50px 150px;
+}
+
+    .footer-container a {
+        font-size: 14px;
+    }
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+    .subscribe-form input {
+        flex: 1;
+        height: 50px;
+        padding: 10px;
+        border: none;
+        background-color: #fff;
+        border-radius: 4px 0 0 4px;
+    }
+
+    .subscribe-form button {
+        background-color: #fb2e86;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+
+.contact-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+.contact-info {
+    color: #888;
+    margin-top: 5px;
+}
+
+.footer-col:nth-child(2) {
+    margin-left: 50px;
+}
+
+.footer-col h3 {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+    .footer-col ul li {
+        margin-bottom: 15px;
+    }
+
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #7d7d7d;
+            transition: color 0.3s;
+        }
+
+            .footer-col ul li a:hover {
+                color: #fb2e86;
+            }
+
+.footer-bottom {
+    padding: 10px 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    color: #888;
+    background-color: #E7E4F8;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: #7d7d7d;
+    margin: 0 10px;
+    font-size: 14px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .social-icons a:hover {
+        background: #151875;
+        color: #fff;
+    }
