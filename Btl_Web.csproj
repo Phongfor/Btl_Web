@@ -83,15 +83,21 @@
     <Content Include="Assets\Images\sp7.png" />
     <Content Include="Assets\Images\sp8.png" />
     <Content Include="Assets\Images\sp9.png" />
+    <Content Include="Global.asax" />
     <Content Include="Pages\Footer.html" />
     <Content Include="Pages\Header.html" />
     <Content Include="Pages\Home.aspx" />
     <Content Include="Pages\ProductDetails.aspx" />
     <Content Include="Pages\Shoplist.aspx" />
     <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\Shoplist.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class\Product.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Assets/CSS/Header.css">
     <link rel="stylesheet" href="../Assets/CSS/Footer.css">
     <link rel="stylesheet" href="../Assets/CSS/Shoplist.css">
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -229,7 +230,7 @@
                     </div>
                 </div>
                 <div class="product-grid">
-                    <div class="product-card">
+                    <div class="product-card" data-id="1">
                         <div class="image-container">
                             <img src="../Assets/Images/sp1.png" alt="Product 1">
                         </div>
@@ -243,7 +244,7 @@
                             <button>ℹ</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="2">
                         <div class="image-container">
                             <img src="../Assets/Images/sp6.png" alt="Product 2">
                         </div>
@@ -257,7 +258,7 @@
                             <button>ℹ</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="3">
                         <div class="image-container">
                             <img src="../Assets/Images/sp4.png" alt="Product 3">
                         </div>
@@ -271,7 +272,7 @@
                             <button>ℹ</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="4">
                         <div class="image-container">
                             <img src="../Assets/Images/sp5.png" alt="Product 3">
                         </div>
@@ -285,7 +286,7 @@
                             <button>ℹ</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="5">
                         <div class="image-container">
                             <img src="../Assets/Images/sp2.png" alt="Product 3">
                         </div>
@@ -299,7 +300,7 @@
                             <button>ℹ</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="6">
                         <div class="image-container">
                             <img src="../Assets/Images/sp3.png" alt="Product 3">
                         </div>
@@ -313,7 +314,7 @@
                             <button>ℹ</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="7">
                         <div class="image-container">
                             <img src="../Assets/Images/sp7.png" alt="Product 3">
                         </div>
@@ -327,7 +328,7 @@
                             <button>ℹ</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="8">
                         <div class="image-container">
                             <img src="../Assets/Images/sp8.png" alt="Product 3">
                         </div>
@@ -341,7 +342,7 @@
                             <button>ℹ</button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="9">
                         <div class="image-container">
                             <img src="../Assets/Images/sp9.png" alt="Product 3">
                         </div>
@@ -424,6 +425,6 @@
           </footer>
 
     </form>
-
+    <script src="../Scripts/Shoplist.js"></script>
 </body>
 </html>

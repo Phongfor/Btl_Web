@@ -119,9 +119,9 @@ c72 0 87 -58 29 -116 -19 -19 -35 -42 -35 -51 0 -26 40 -83 70 -98 51 -26 64
             </div>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="../Pages/Home.aspx" class="active">Home</a></li>
                     <li><a href="#">Pages</a></li>
-                    <li><a href="#">Products</a></li>
+                    <li><a href="../Pages/Shoplist.aspx">Products</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">Contact</a></li>
@@ -150,48 +150,58 @@ c72 0 87 -58 29 -116 -19 -19 -35 -42 -35 -51 0 -26 40 -83 70 -98 51 -26 64
             <h1>Product Details</h1>
         </div>
 
-        <div class="product-container">
-            <div class="gallery">
-                <div class="thumbnails">
-                    <img src="../Assets/Images/sp1.png" alt="">
-                    <img src="../Assets/Images/sp1.png" alt="">
-                    <img src="../Assets/Images/sp1.png" alt="">
-                </div>
-                <div class="main-image">
-                    <img src="../Assets/Images/sp2.png" alt="Playwood arm chair">
-                </div>
-            </div>
-
-            <div class="product-details">
-                <h2>Playwood arm chair</h2>
-                <div class="rating">
-                    ⭐⭐⭐⭐⭐ <span>(22)</span>
-                </div>
-                <div class="price">
-                    <span class="new">$32.00</span>
-                    <span class="old">$52.00</span>
-                </div>
-                <p><strong>Color</strong></p>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit.</p>
-                <div class="order">
-                    <button class="add-to-cart">Add To Cart</button>
-                    <ion-icon name="heart-outline" class="heart-icon"></ion-icon>
-                </div>
-
-
-                <div class="meta">
-                    <p><strong>Categories:</strong> </p>
-                    <p><strong>Tags:</strong></p>
-                    <p><strong>Share:</strong> 🔵 🔴 🟣</p>
-                </div>
-            </div>
+       <div class="product-container">
+    <div class="gallery">
+        <div class="thumbnails">
+            <img id="thumb1" runat="server" src="../Assets/Images/sp1.png" alt="Thumbnail 1" />
+            <img id="thumb2" runat="server" src="../Assets/Images/sp1.png" alt="Thumbnail 2" />
+            <img id="thumb3" runat="server" src="../Assets/Images/sp1.png" alt="Thumbnail 3" />
         </div>
+        <div class="main-image">
+            <img id="mainImage" runat="server" src="../Assets/Images/sp1.png" alt="Main Product Image" />
+        </div>
+    </div>
+
+    <div class="product-details">
+        <h2><span id="productName" runat="server">Dictum morbi</span></h2>
+        
+        <div class="rating">
+            ⭐⭐⭐⭐⭐ <span>(22)</span>
+        </div>
+        
+        <div class="price">
+            <span class="new" id="newPrice" runat="server">$26.00</span>
+            <span class="old" id="oldPrice" runat="server">$30.00</span>
+        </div>
+        
+        <p><strong>Color</strong></p>
+        
+        <p class="description">
+            <span id="productDescription" runat="server">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit.
+            </span>
+        </p>
+        
+        <div class="order">
+            <button class="add-to-cart">Add To Cart</button>
+            <ion-icon name="heart-outline" class="heart-icon"></ion-icon>
+        </div>
+
+        <div class="meta">
+            <p><strong>Categories:</strong> Chair</p>
+            <p><strong>Tags:</strong> Wood, Modern</p>
+            <p><strong>Share:</strong> 🔵 🔴 🟣</p>
+        </div>
+    </div>
+</div>
+
+
 
         <div class="product-tabs">
             <ul class="tabs">
                 <li class="active">Description</li>
                 <li>Additional Info</li>
-                <li>Reviews</li>             
+                <li>Reviews</li>
             </ul>
 
             <div class="tab-content">
