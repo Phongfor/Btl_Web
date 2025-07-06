@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -16,6 +17,8 @@ namespace Btl_Web
             {
                 new Product { Id = 1, Name = "Dictum morbi", Price = 26.00, OldPrice = 30.00,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit." ,
+                            Brand = "Coaster Furniture",
+                            Category="Prestashop",
                             Images = new List<string>
                             {
                                 "../Assets/Images/sp1.png",
@@ -26,6 +29,8 @@ namespace Btl_Web
 
                 new Product { Id = 2, Name = "Sodales sit", Price = 32.00, OldPrice = 52.00,
                             Description = "Mauris tellus porttitor purus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit...." ,
+                            Brand = "Fusion Dot High Fashion",
+                            Category="Magentor",
                             Images = new List<String>{
                             "../Assets/Images/sp2.png",
                             "../Assets/Images/sp2.png",
@@ -35,6 +40,8 @@ namespace Btl_Web
 
                 new Product { Id = 3, Name = "Dictum morbi", Price = 26.00, OldPrice = 30.00,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit." ,
+                            Brand = "Unique Furniture Restorer",
+                            Category="Bigcommerce",
                             Images = new List<string>
                             {
                                 "../Assets/Images/sp3.png",
@@ -45,6 +52,8 @@ namespace Btl_Web
 
                 new Product { Id = 4, Name = "Sodales sit", Price = 32.00, OldPrice = 52.00,
                             Description = "Mauris tellus porttitor purus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit...." ,
+                            Brand = "Dream Furniture Flipping",
+                            Category="osCommerce",
                             Images = new List<String>{
                             "../Assets/Images/sp4.png",
                             "../Assets/Images/sp4.png",
@@ -54,6 +63,8 @@ namespace Btl_Web
 
                 new Product { Id = 5, Name = "Dictum morbi", Price = 26.00, OldPrice = 30.00,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit." ,
+                            Brand = "Young Repurposed",
+                            Category="3dcart",
                             Images = new List<string>
                             {
                                 "../Assets/Images/sp5.png",
@@ -64,6 +75,8 @@ namespace Btl_Web
 
                 new Product { Id = 6, Name = "Sodales sit", Price = 32.00, OldPrice = 52.00,
                             Description = "Mauris tellus porttitor purus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit...." ,
+                            Brand = "Green DIY Furniture",
+                            Category="Accessories",
                             Images = new List<String>{
                             "../Assets/Images/sp6.png",
                             "../Assets/Images/sp6.png",
@@ -73,6 +86,8 @@ namespace Btl_Web
 
                 new Product { Id = 7, Name = "Dictum morbi", Price = 26.00, OldPrice = 30.00,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit." ,
+                            Brand = "Fusion Dot High Fashion",
+                            Category="Accessories",
                             Images = new List<string>
                             {
                                 "../Assets/Images/sp7.png",
@@ -83,6 +98,8 @@ namespace Btl_Web
 
                 new Product { Id = 8, Name = "Sodales sit", Price = 32.00, OldPrice = 52.00,
                             Description = "Mauris tellus porttitor purus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit...." ,
+                            Brand = "Fusion Dot High Fashion",
+                            Category="Jewellery",
                             Images = new List<String>{
                             "../Assets/Images/sp8.png",
                             "../Assets/Images/sp8.png",
@@ -92,6 +109,8 @@ namespace Btl_Web
 
                 new Product { Id = 9, Name = "Dictum morbi", Price = 26.00, OldPrice = 30.00,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit." ,
+                            Brand = "Young Repurposed",
+                            Category="Prestashop",
                             Images = new List<string>
                             {
                                 "../Assets/Images/sp9.png",
