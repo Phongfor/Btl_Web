@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="../Assets/CSS/Header.css">
     <link rel="stylesheet" href="../Assets/CSS/Footer.css">
     <link rel="stylesheet" href="../Assets/CSS/Shoplist.css">
-    
+
+    <style>
+        .hide {
+            display: none !important;
+        }
+    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -133,7 +139,7 @@
             </nav>
             <div class="search-cart">
                 <div class="search-box">
-                    <input type="text" placeholder="Search...">
+                    <input type="text" id="searchInput" placeholder="Search...">
                     <button>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21.7099 20.2899L17.9999 16.6099C19.44 14.8143 20.1374 12.5352 19.9487 10.2412C19.76 7.94721 18.6996 5.81269 16.9854 4.27655C15.2713 2.74041 13.0337 1.91941 10.7328 1.98237C8.43194 2.04534 6.24263 2.98747 4.61505 4.61505C2.98747 6.24263 2.04534 8.43194 1.98237 10.7328C1.91941 13.0337 2.74041 15.2713 4.27655 16.9854C5.81269 18.6996 7.94721 19.76 10.2412 19.9487C12.5352 20.1374 14.8143 19.44 16.6099 17.9999L20.2899 21.6799C20.3829 21.7736 20.4935 21.848 20.6153 21.8988C20.7372 21.9496 20.8679 21.9757 20.9999 21.9757C21.1319 21.9757 21.2626 21.9496 21.3845 21.8988C21.5063 21.848 21.6169 21.7736 21.7099 21.6799C21.8901 21.4934 21.9909 21.2442 21.9909 20.9849C21.9909 20.7256 21.8901 20.4764 21.7099 20.2899ZM10.9999 17.9999C9.61544 17.9999 8.26206 17.5894 7.11091 16.8202C5.95977 16.051 5.06256 14.9578 4.53275 13.6787C4.00293 12.3996 3.86431 10.9921 4.13441 9.63427C4.4045 8.27641 5.07119 7.02912 6.05016 6.05016C7.02912 5.07119 8.27641 4.4045 9.63427 4.13441C10.9921 3.86431 12.3996 4.00293 13.6787 4.53275C14.9578 5.06256 16.051 5.95977 16.8202 7.11091C17.5894 8.26206 17.9999 9.61544 17.9999 10.9999C17.9999 12.8564 17.2624 14.6369 15.9497 15.9497C14.6369 17.2624 12.8564 17.9999 10.9999 17.9999Z" fill="url(#paint0_linear_761_1921)" />
@@ -156,61 +162,61 @@
                 <h3>Product Brand</h3>
                 <ul>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Coaster Furniture" class="brand-filter">
                         Coaster Furniture</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Fusion Dot High Fashion" class="brand-filter">
                         Fusion Dot High Fashion</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Unique Furniture Restorer" class="brand-filter">
                         Unique Furniture Restorer</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Dream Furniture Flipping" class="brand-filter">
                         Dream Furniture Flipping</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Young Repurposed" class="brand-filter">
                         Young Repurposed</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Green DIY Furniture" class="brand-filter">
                         Green DIY Furniture</li>
                 </ul>
                 <h3>Categories</h3>
                 <ul>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Prestashop" class="Categories">
                         Prestashop</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Magentor" class="Categories">
                         Magentor</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Bigcommerce" class="Categories">
                         Bigcommerce</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="osCommerce" class="Categories">
                         osCommerce</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="3dcart" class="Categories">
                         3dcart</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Accessories" class="Categories">
                         Accessories</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="Jewellery" class="Categories">
                         Jewellery</li>
                 </ul>
                 <h3>Price filter</h3>
                 <ul>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="0-150" class="price-filter">
                         $0.00 - $150.00</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="150-350" class="price-filter">
                         $150.00 - $350.00</li>
                     <li>
-                        <input type="checkbox">
-                        $150.00 - $500.00</li>
+                        <input type="checkbox" value="350-500" class="price-filter">
+                        $350.00 - $500.00</li>
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" value="500" class="price-filter">
                         $500.00 +</li>
                 </ul>
 
@@ -218,203 +224,60 @@
 
             <!-- Products -->
             <div class="main-content">
-                <div class="header">
-                    <h2>Ecommerce Accessories & Fashion Item</h2>
-                    <div class="filters">
-                        <label for="perpage">Per Page: </label>
-                        <input type="text" placeholder="" name="perpage">
-                        <label for="Sort">Sort By:</label>
-                        <select name="Sort">
-                            <option>Best Match</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="product-grid">
-                    <div class="product-card" data-id="1">
-                        <div class="image-container">
-                            <img src="../Assets/Images/sp1.png" alt="Product 1">
-                        </div>
-                        <h4>Dictum morbi</h4>
-                        <p>$26.00 <span>$30.00</span></p>
-                        <span>★★★★☆</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in pharetra non in justo.</p>
-                        <div class="button-group">
-                            <button>Buy</button>
-                            <button>♥</button>
-                            <button>ℹ</button>
-                        </div>
-                    </div>
-                    <div class="product-card" data-id="2">
-                        <div class="image-container">
-                            <img src="../Assets/Images/sp6.png" alt="Product 2">
-                        </div>
-                        <h4>Sodales sit</h4>
-                        <p>$26.00 <span></span></p>
-                        <span>★★★★☆</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in pharetra non in justo.</p>
-                        <div class="button-group">
-                            <button>Buy</button>
-                            <button>♥</button>
-                            <button>ℹ</button>
-                        </div>
-                    </div>
-                    <div class="product-card" data-id="3">
-                        <div class="image-container">
-                            <img src="../Assets/Images/sp4.png" alt="Product 3">
-                        </div>
-                        <h4>Nibh varius</h4>
-                        <p>$26.00 <span>$30.00</span></p>
-                        <span>★★★★☆</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in pharetra non in justo.</p>
-                        <div class="button-group">
-                            <button>Buy</button>
-                            <button>♥</button>
-                            <button>ℹ</button>
-                        </div>
-                    </div>
-                    <div class="product-card" data-id="4">
-                        <div class="image-container">
-                            <img src="../Assets/Images/sp5.png" alt="Product 3">
-                        </div>
-                        <h4>Nibh varius</h4>
-                        <p>$26.00 <span>$30.00</span></p>
-                        <span>★★★★☆</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in pharetra non in justo.</p>
-                        <div class="button-group">
-                            <button>Buy</button>
-                            <button>♥</button>
-                            <button>ℹ</button>
-                        </div>
-                    </div>
-                    <div class="product-card" data-id="5">
-                        <div class="image-container">
-                            <img src="../Assets/Images/sp2.png" alt="Product 3">
-                        </div>
-                        <h4>Nibh varius</h4>
-                        <p>$26.00 <span>$30.00</span></p>
-                        <span>★★★★☆</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in pharetra non in justo.</p>
-                        <div class="button-group">
-                            <button>Buy</button>
-                            <button>♥</button>
-                            <button>ℹ</button>
-                        </div>
-                    </div>
-                    <div class="product-card" data-id="6">
-                        <div class="image-container">
-                            <img src="../Assets/Images/sp3.png" alt="Product 3">
-                        </div>
-                        <h4>Nibh varius</h4>
-                        <p>$26.00 <span>$30.00</span></p>
-                        <span>★★★★☆</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in pharetra non in justo.</p>
-                        <div class="button-group">
-                            <button>Buy</button>
-                            <button>♥</button>
-                            <button>ℹ</button>
-                        </div>
-                    </div>
-                    <div class="product-card" data-id="7">
-                        <div class="image-container">
-                            <img src="../Assets/Images/sp7.png" alt="Product 3">
-                        </div>
-                        <h4>Nibh varius</h4>
-                        <p>$26.00 <span>$30.00</span></p>
-                        <span>★★★★☆</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in pharetra non in justo.</p>
-                        <div class="button-group">
-                            <button>Buy</button>
-                            <button>♥</button>
-                            <button>ℹ</button>
-                        </div>
-                    </div>
-                    <div class="product-card" data-id="8">
-                        <div class="image-container">
-                            <img src="../Assets/Images/sp8.png" alt="Product 3">
-                        </div>
-                        <h4>Nibh varius</h4>
-                        <p>$26.00 <span>$30.00</span></p>
-                        <span>★★★★☆</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in pharetra non in justo.</p>
-                        <div class="button-group">
-                            <button>Buy</button>
-                            <button>♥</button>
-                            <button>ℹ</button>
-                        </div>
-                    </div>
-                    <div class="product-card" data-id="9">
-                        <div class="image-container">
-                            <img src="../Assets/Images/sp9.png" alt="Product 3">
-                        </div>
-                        <h4>Nibh varius</h4>
-                        <p>$26.00 <span>$30.00</span></p>
-                        <span>★★★★☆</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in pharetra non in justo.</p>
-                        <div class="button-group">
-                            <button>Buy</button>
-                            <button>♥</button>
-                            <button>ℹ</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="pagination">
-                    <button>Previous</button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>Next</button>
-                </div>
+                <asp:Literal ID="ProductHtml" runat="server" />
             </div>
         </div>
+       
+</div>
         </div>
 
         <footer class="footer">
-              <div class="footer-container">
-                  <div class="footer-col">
-                      <h2 class="footer-logo">Ethereal</h2>
-                      <form class="subscribe-form">
-                          <input type="email" placeholder="Enter Email Address" />
-                          <button type="submit">Sign Up</button>
-                      </form>
-                      <p class="contact-title">Contact Info</p>
-                      <p class="contact-info">17 Princess Road, London, Greater London NW1 8JR, UK</p>
-                  </div>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h2 class="footer-logo">Ethereal</h2>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Enter Email Address" />
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <p class="contact-title">Contact Info</p>
+                    <p class="contact-info">17 Princess Road, London, Greater London NW1 8JR, UK</p>
+                </div>
 
-                  <div class="footer-col">
-                      <h3>Catagories</h3>
-                      <ul>
-                          <li><a href="#">Laptops & Computers</a></li>
-                          <li><a href="#">Cameras & Photography</a></li>
-                          <li><a href="#">Smart Phones & Tablets</a></li>
-                          <li><a href="#">Video Games & Consoles</a></li>
-                          <li><a href="#">Waterproof Headphones</a></li>
-                      </ul>
-                  </div>
+                <div class="footer-col">
+                    <h3>Catagories</h3>
+                    <ul>
+                        <li><a href="#">Laptops & Computers</a></li>
+                        <li><a href="#">Cameras & Photography</a></li>
+                        <li><a href="#">Smart Phones & Tablets</a></li>
+                        <li><a href="#">Video Games & Consoles</a></li>
+                        <li><a href="#">Waterproof Headphones</a></li>
+                    </ul>
+                </div>
 
-                  <div class="footer-col">
-                      <h3>Customer Care</h3>
-                      <ul>
-                          <li><a href="#">My Account</a></li>
-                          <li><a href="#">Discount</a></li>
-                          <li><a href="#">Returns</a></li>
-                          <li><a href="#">Orders History</a></li>
-                          <li><a href="#">Order Tracking</a></li>
-                      </ul>
-                  </div>
+                <div class="footer-col">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Discount</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Orders History</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                    </ul>
+                </div>
 
-                  <div class="footer-col">
-                      <h3>Pages</h3>
-                      <ul>
-                          <li><a href="#">Blog</a></li>
-                          <li><a href="#">Browse the Shop</a></li>
-                          <li><a href="#">Category</a></li>
-                          <li><a href="#">Pre-Built Pages</a></li>
-                          <li><a href="#">Visual Composer Elements</a></li>
-                          <li><a href="#">WooCommerce Pages</a></li>
-                      </ul>
-                  </div>
-              </div>
-              </div>
+                <div class="footer-col">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Browse the Shop</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Pre-Built Pages</a></li>
+                        <li><a href="#">Visual Composer Elements</a></li>
+                        <li><a href="#">WooCommerce Pages</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
   <div class="footer-bottom">
       <p>©Webecy - All Rights Reserved</p>
       <div class="social-icons">
@@ -422,7 +285,7 @@
           <a href="#"><i class="fa fa-instagram"></i></a>
           <a href="#"><i class="fa fa-twitter"></i></a>
       </div>
-          </footer>
+        </footer>
 
     </form>
     <script src="../Scripts/Shoplist.js"></script>
