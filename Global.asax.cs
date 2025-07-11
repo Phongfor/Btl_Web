@@ -121,7 +121,19 @@ namespace Btl_Web
 
             };
 
-            Application["Products"] = products;
+            Application["Products"] = products; // ✅ Gán danh sách sản phẩm
+
+            var users = new List<User>
+    {
+        new User { FullName = "Nguyễn Văn A", Email = "a@gmail.com", Password = "123456", Adress = "123 Lê Duẩn, Đà Nẵng" },
+        new User { FullName = "Trần Thị B", Email = "b@yahoo.com", Password = "abc123", Adress = "456 Nguyễn Huệ, Huế" },
+        new User { FullName = "Lê Văn C", Email = "c@hotmail.com", Password = "pass@123", Adress = "789 Trần Hưng Đạo, TP.HCM" }
+    };
+
+            if (Application["UserList"] == null)
+            {
+                Application["UserList"] = users; // ✅ Không ghi đè nếu đã tồn tại
+            }
         }
 
         protected void Session_Start(object sender, EventArgs e)
