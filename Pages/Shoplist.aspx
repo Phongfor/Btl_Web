@@ -12,7 +12,7 @@
     <style>
         .hide {
             display: none !important;
-        }
+        }   
     </style>
 
 </head>
@@ -216,7 +216,7 @@
                         <input type="checkbox" value="350-500" class="price-filter">
                         $350.00 - $500.00</li>
                     <li>
-                        <input type="checkbox" value="500" class="price-filter">
+                        <input type="checkbox" value="500" class="price-filter"/>
                         $500.00 +</li>
                 </ul>
 

@@ -1,0 +1,125 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fff;
+}
+
+.Tieude {
+    padding: 20px;
+    background-color: #f5f7fa;
+    text-align: left;
+    margin: 20px;
+}
+
+    .Tieude h1 {
+        color: #1a0dab;
+        font-size: 24px;
+        margin: 0;
+    }
+
+.breadcrumb {
+    color: #ff1493;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+    .login-container h2 {
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+.subtext {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+    .input-box:focus {
+        border-color: #6a0dad;
+        outline: none;
+    }
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+    .forgot-password:hover {
+        color: #ff1493;
+    }
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+    .login-button:hover {
+        background-color: #e60073;
+    }
+
+.create-account {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+    .create-account a {
+        color: #ff1493;
+        text-decoration: none;
+    }
+
+        .create-account a:hover {
+            text-decoration: underline;
+        }
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

@@ -69,11 +69,23 @@
   <ItemGroup>
     <Content Include="Assets\CSS\Footer.css" />
     <Content Include="Assets\CSS\Header.css" />
+    <Content Include="Assets\CSS\HektoDemo.css" />
     <Content Include="Assets\CSS\Home.css" />
+    <Content Include="Assets\CSS\Login.css" />
+    <Content Include="Assets\CSS\OrderCompleted.css" />
     <Content Include="Assets\CSS\ProductDetails.css" />
     <Content Include="Assets\CSS\Shoplist.css" />
+    <Content Include="Assets\CSS\ShoppingCart.css" />
     <Content Include="Assets\Icons\cart.svg" />
     <Content Include="Assets\Icons\search.svg" />
+    <Content Include="Assets\Images\aboutUS1.png" />
+    <Content Include="Assets\Images\aboutUS2.png" />
+    <Content Include="Assets\Images\aboutUS3.png" />
+    <Content Include="Assets\Images\aboutUS4.png" />
+    <Content Include="Assets\Images\aboutUS5.png" />
+    <Content Include="Assets\Images\DONGHO.png" />
+    <Content Include="Assets\Images\imageBanner.png" />
+    <Content Include="Assets\Images\nhat.png" />
     <Content Include="Assets\Images\sp1.png" />
     <Content Include="Assets\Images\sp2.png" />
     <Content Include="Assets\Images\sp3.png" />
@@ -83,12 +95,22 @@
     <Content Include="Assets\Images\sp7.png" />
     <Content Include="Assets\Images\sp8.png" />
     <Content Include="Assets\Images\sp9.png" />
+    <Content Include="Assets\Images\tic.png" />
+    <Content Include="Assets\Images\tich.png" />
     <Content Include="Global.asax" />
+    <Content Include="Pages\Footer.ascx" />
+    <Content Include="Pages\Header.ascx" />
+    <Content Include="Pages\HektoDemo.aspx" />
+    <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Footer.html" />
     <Content Include="Pages\Header.html" />
     <Content Include="Pages\Home.aspx" />
+    <Content Include="Pages\OrderCompleted.aspx" />
     <Content Include="Pages\ProductDetails.aspx" />
     <Content Include="Pages\Shoplist.aspx" />
+    <Content Include="Pages\Register.aspx" />
+    <Content Include="Assets\CSS\Register.css" />
+    <Content Include="Pages\ShoppingCart.aspx" />
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\Shoplist.js" />
     <Content Include="Web.config" />
@@ -98,12 +120,47 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HektoDemo.aspx.cs">
+      <DependentUpon>HektoDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HektoDemo.aspx.designer.cs">
+      <DependentUpon>HektoDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderCompleted.aspx.cs">
+      <DependentUpon>OrderCompleted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OrderCompleted.aspx.designer.cs">
+      <DependentUpon>OrderCompleted.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProductDetails.aspx.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
@@ -119,7 +176,22 @@
     <Compile Include="Pages\Shoplist.aspx.designer.cs">
       <DependentUpon>Shoplist.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
