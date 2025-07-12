@@ -7,6 +7,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="../Assets/CSS/Footer.css"/>
+    <link rel="stylesheet" href="../Assets/CSS/Header.css"/>
+    <link rel="stylesheet" href="../Assets/CSS/Home.css"/>
     
   <link rel="stylesheet" href="../Assets/CSS/Home.css?v=123" />
 
