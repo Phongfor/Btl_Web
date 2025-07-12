@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Btl_Web
+namespace Btl_Web.Pages
 {
 
 
-    public partial class AboutUs
+    public partial class SearchProduct
     {
 
         /// <summary>
@@ -22,14 +22,5 @@ namespace Btl_Web
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Btl_Web.Pages.Header Header;
-
-        /// <summary>
-        /// Footer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Btl_Web.Pages.Footer Footer;
     }
 }

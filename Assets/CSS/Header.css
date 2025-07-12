@@ -58,6 +58,11 @@ nav ul {
         position: relative;
     }
 
+        nav ul li a.active {
+            color: red;
+        }
+
+
         nav ul li a::after {
             content: "";
             position: absolute;
