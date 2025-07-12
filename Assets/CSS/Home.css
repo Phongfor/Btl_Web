@@ -191,3 +191,162 @@
         margin-left: 5px;
         transition: color 0.3s;
     }
+/* ✅ Shopex Offer */
+.offer-section {
+    padding: 60px 80px;
+    text-align: center;
+}
+
+    .offer-section h2 {
+        font-size: 28px;
+        color: #2F1AC4;
+        margin-bottom: 30px;
+    }
+
+.offer-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.offer-card {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 220px;
+    border-radius: 12px;
+}
+
+    .offer-card img {
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .offer-card h4 {
+        color: #2F1AC4;
+        margin-bottom: 10px;
+    }
+
+    .offer-card p {
+        color: #777;
+        font-size: 14px;
+    }
+
+
+/* ✅ Unique Feature */
+.unique-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F5FF;
+    padding: 50px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.feature-image img {
+    width: 300px;
+}
+
+.feature-content h2 {
+    color: #2F1AC4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feature-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+    .feature-content ul li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 20px;
+    }
+
+        .feature-content ul li::before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            color: #FF3E6C;
+        }
+
+.feature-content button {
+    background-color: #FB2E86;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.feature-content .product-name {
+    font-weight: bold;
+    color: #2F1AC4;
+}
+
+    .feature-content .product-name span {
+        margin-left: 10px;
+        color: black;
+    }
+
+
+/* ✅ Trending Products */
+.trending-products {
+    padding: 50px 80px;
+    text-align: center;
+}
+
+    .trending-products h2 {
+        color: #2F1AC4;
+        margin-bottom: 30px;
+    }
+
+.trending-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trending-card {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    width: 200px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+    .trending-card:hover {
+        background-color: #2F1AC4;
+        color: white;
+        transform: translateY(-5px);
+    }
+
+    .trending-card img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .trending-card h4 {
+        margin: 10px 0 5px;
+        color: #2F1AC4;
+    }
+
+    .trending-card p {
+        color: #777;
+        font-size: 14px;
+    }
+
+    .trending-card .price-old {
+        text-decoration: line-through;
+        color: gray;
+        margin-left: 5px;
+    }

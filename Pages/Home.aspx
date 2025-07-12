@@ -7,9 +7,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="../Assets/CSS/Footer.css"/>
-    <link rel="stylesheet" href="../Assets/CSS/Header.css"/>
-    <link rel="stylesheet" href="../Assets/CSS/Home.css"/>
+    
+  <link rel="stylesheet" href="../Assets/CSS/Home.css?v=123" />
+
     
 </head>
 <body>
@@ -25,7 +25,7 @@
                 <button>Shop Now</button>
             </div>
             <div class="banner-image">
-                <img src="../Assets/Images/imageBanner" alt="Pink Chair" />
+                <img src="../Assets/Images/imageBanner.png" alt="Pink Chair" />
             </div>
         </div>
 
@@ -93,7 +93,7 @@
                     <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
                 </div>
                 <div class="latest-card">
-                    <img src="../Assets/Images/sp7.png" alt="Chair" />
+                    <img src="../Assets/Images/sp13.png" alt="Chair" />
                     <h4>Comfort Handy Craft</h4>
                     <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
                 </div>
@@ -104,6 +104,79 @@
                 </div>
             </div>
         </section>
+    <!-- ✅ What Shopex Offer -->
+<section class="offer-section">
+    <h2>What Shopex Offer!</h2>
+    <div class="offer-grid">
+        <div class="offer-card">
+            <img src="../Assets/Images/aboutUS2.png" alt="Free Delivery" />
+            <h4>24/7 Support</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="offer-card">
+            <img src="../Assets/Images/aboutUS3.png" alt="Support" />
+            <h4>100% Authentic</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="offer-card">
+            <img src="../Assets/Images/aboutUS4.png" alt="Quality" />
+            <h4>Free Delivery</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="offer-card">
+            <img src="../Assets/Images/aboutUS5.png" alt="Customer Care" />
+            <h4>Easy Returns</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ✅ Unique Features -->
+<section class="unique-feature">
+    <div class="feature-image">
+        <img src="../Assets/Images/sofa.png" alt="Sofa" />
+    </div>
+    <div class="feature-content">
+        <h2>Unique Features Of Latest & Trending Products</h2>
+        <ul>
+            <li>All frames constructed with hardwood solids and laminates</li>
+            <li>Reinforced with double wood dowels, glue, screw – nails</li>
+            <li>Arms, backs and seats are structurally reinforced</li>
+        </ul>
+        <button>Add To Cart</button>
+        <p class="product-name">B&B Italian Sofa <span>$32.00</span></p>
+    </div>
+</section>
+
+<!-- ✅ Trending Products -->
+<section class="trending-products">
+    <h2>Trending Products</h2>
+    <div class="trending-grid">
+        <div class="trending-card">
+            <img src="../Assets/Images/sp10.png" alt="Chair" />
+            <h4>Cantilever chair</h4>
+            <p><span>$26.00</span> <span class="price-old">$42.00</span></p>
+        </div>
+        <div class="trending-card">
+            <img src="../Assets/Images/sp11.png" alt="Chair" />
+            <h4>Cantilever chair</h4>
+            <p><span>$26.00</span> <span class="price-old">$42.00</span></p>
+        </div>
+        <div class="trending-card">
+            <img src="../Assets/Images/sp12.png" alt="Chair" />
+            <h4>Cantilever chair</h4>
+            <p><span>$26.00</span> <span class="price-old">$42.00</span></p>
+        </div>
+        <div class="trending-card">
+            <img src="../Assets/Images/sp7.png" alt="Chair" />
+            <h4>Cantilever chair</h4>
+            <p><span>$26.00</span> <span class="price-old">$42.00</span></p>
+        </div>
+    </div>
+</section>
+
+
+
   
     <%-- Footer --%>
     <uc:Footer ID="Footer" runat="server" />
