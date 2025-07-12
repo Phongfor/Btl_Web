@@ -1,0 +1,130 @@
+﻿body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fff;
+    color: #2d3748;
+}
+
+main {
+    padding: 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.checkout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-form, .order-summary {
+    width: 48%;
+    background: #f6f5ff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contact-form h3, .order-summary h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+.contact-form label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    margin-left: 0; /* Đảm bảo label không có margin trái */
+}
+
+    /* Tách input thường */
+    .contact-form input:not([type="checkbox"]) {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+    }
+
+    /* Checkbox riêng */
+    .contact-form input[type="checkbox"] {
+        width: auto;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+/* Checkbox line styling */
+.checkbox-label {
+    display: inline-flex; /* Cho phép căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa checkbox và văn bản */
+    font-size: 13px; /* Nhỏ gọn giống demo */
+    color: #555; /* Tùy chỉnh màu chữ nếu cần */
+    gap: 6px; /* Khoảng cách giữa checkbox và text */
+    margin-bottom: 15px; /* Khoảng cách phía dưới */
+}
+
+    /* Styling for the checkbox itself */
+    .checkbox-label input[type="checkbox"] {
+        width: 14px; /* Thu nhỏ checkbox */
+        height: 14px;
+        accent-color: #22c55e; /* Màu xanh giống bản demo (trình duyệt hiện đại) */
+        margin: 0; /* Xóa khoảng trống mặc định */
+        vertical-align: middle; /* Căn giữa nếu inline */
+    }
+
+
+.contact-form button {
+    background-color: #fb2e86;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.order-summary ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.order-summary ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.order-summary .subtotal, .order-summary .shipping, .order-summary .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.order-summary .total {
+    font-weight: bold;
+}
+
+.order-summary button {
+    background-color: #48bb78;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}

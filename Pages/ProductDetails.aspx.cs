@@ -32,5 +32,10 @@ namespace Btl_Web.Pages
             }
         }
 
+        protected void btnAddToCart_Click()
+        {
+
+        }
+
     }
 }

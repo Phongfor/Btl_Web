@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Btl_Web.Pages
+namespace WebApplication
 {
 
 
-    public partial class ProductDetails
+    public partial class ShoppingCart
     {
 
         /// <summary>
@@ -33,76 +33,94 @@ namespace Btl_Web.Pages
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// thumb1 control.
+        /// CartRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage thumb1;
+        protected global::System.Web.UI.WebControls.Repeater CartRepeater;
 
         /// <summary>
-        /// thumb2 control.
+        /// UpdateCartBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage thumb2;
+        protected global::System.Web.UI.WebControls.Button UpdateCartBtn;
 
         /// <summary>
-        /// thumb3 control.
+        /// ClearCartBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage thumb3;
+        protected global::System.Web.UI.WebControls.Button ClearCartBtn;
 
         /// <summary>
-        /// mainImage control.
+        /// SubtotalLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage mainImage;
+        protected global::System.Web.UI.WebControls.Label SubtotalLabel;
 
         /// <summary>
-        /// productName control.
+        /// TotalLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productName;
+        protected global::System.Web.UI.WebControls.Label TotalLabel;
 
         /// <summary>
-        /// newPrice control.
+        /// CheckoutBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl newPrice;
+        protected global::System.Web.UI.WebControls.Button CheckoutBtn;
 
         /// <summary>
-        /// oldPrice control.
+        /// CountryDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl oldPrice;
+        protected global::System.Web.UI.WebControls.DropDownList CountryDropDown;
 
         /// <summary>
-        /// productDescription control.
+        /// StateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productDescription;
+        protected global::System.Web.UI.WebControls.TextBox StateTextBox;
+
+        /// <summary>
+        /// ZipTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ZipTextBox;
+
+        /// <summary>
+        /// CalculateShippingBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CalculateShippingBtn;
 
         /// <summary>
         /// Footer control.
