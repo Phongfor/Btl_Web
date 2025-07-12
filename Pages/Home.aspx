@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../Assets/CSS/Footer.css"/>
     <link rel="stylesheet" href="../Assets/CSS/Header.css"/>
     <link rel="stylesheet" href="../Assets/CSS/Home.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
     
 </head>
 <body>
