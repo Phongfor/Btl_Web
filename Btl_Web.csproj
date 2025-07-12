@@ -72,7 +72,9 @@
     <Content Include="Assets\CSS\HektoDemo.css" />
     <Content Include="Assets\CSS\Home.css" />
     <Content Include="Assets\CSS\Login.css" />
+
     <Content Include="Assets\CSS\OrderCompleted.css" />
+
     <Content Include="Assets\CSS\ProductDetails.css" />
     <Content Include="Assets\CSS\Shoplist.css" />
     <Content Include="Assets\Icons\cart.svg" />
@@ -82,9 +84,11 @@
     <Content Include="Assets\Images\aboutUS3.png" />
     <Content Include="Assets\Images\aboutUS4.png" />
     <Content Include="Assets\Images\aboutUS5.png" />
+
     <Content Include="Assets\Images\DONGHO.png" />
     <Content Include="Assets\Images\imageBanner.png" />
     <Content Include="Assets\Images\nhat.png" />
+
     <Content Include="Assets\Images\sp1.png" />
     <Content Include="Assets\Images\sp2.png" />
     <Content Include="Assets\Images\sp3.png" />
@@ -97,17 +101,23 @@
     <Content Include="Assets\Images\tic.png" />
     <Content Include="Assets\Images\tich.png" />
     <Content Include="Global.asax" />
+
     <Content Include="Pages\Footer.ascx" />
     <Content Include="Pages\Header.ascx" />
     <Content Include="Pages\HektoDemo.aspx" />
     <Content Include="Pages\Login.aspx" />
+
+
+
     <Content Include="Pages\Home.aspx" />
     <Content Include="Pages\OrderCompleted.aspx" />
     <Content Include="Pages\ProductDetails.aspx" />
     <Content Include="Pages\Shoplist.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Assets\CSS\Register.css" />
+
     <Content Include="Pages\ShoppingCart.aspx" />
+
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\Shoplist.js" />
     <Content Include="Web.config" />
@@ -117,6 +127,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+
     <Compile Include="Pages\Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,6 +149,7 @@
     <Compile Include="Pages\HektoDemo.aspx.designer.cs">
       <DependentUpon>HektoDemo.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
