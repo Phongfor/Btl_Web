@@ -1,8 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Footer.ascx.cs" Inherits="Btl_Web.Pages.Footer" %>
-<link rel="stylesheet" href="/Assets/CSS/Footer.css" />
+<link rel="stylesheet" href="../Assets/CSS/Footer.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-<div class="footer">
+
+<footer class="footer">
     <div class="footer-container">
         <div class="footer-col">
             <h2 class="footer-logo">Ethereal</h2>
@@ -15,7 +16,7 @@
         </div>
 
         <div class="footer-col">
-            <h3>Categories</h3>
+            <h3>Catagories</h3>
             <ul>
                 <li><a href="#">Laptops & Computers</a></li>
                 <li><a href="#">Cameras & Photography</a></li>
@@ -48,13 +49,11 @@
             </ul>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <p>© Webecy - All Rights Reserved</p>
+        <div class="footer-bottom"></div>
+        <p>©Webecy - All Rights Reserved</p>
         <div class="social-icons">
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-instagram"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
         </div>
-    </div>
-</div>
+</footer>

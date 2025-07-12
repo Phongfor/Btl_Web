@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../Assets/CSS/HektoDemo.css" />
 </head>
 <body>
-    <uc:Header ID="Header1" runat="server" />
+    <uc:Header ID="Header" runat="server" />
     <main>
         <h1>Hekto Demo</h1>
         <section class="checkout">
@@ -47,6 +47,6 @@
             </div>
         </section>
     </main>
-    <uc:Footer ID="Footer1" runat="server" />
+    <uc:Footer ID="Footer" runat="server" />
 </body>
 </html>

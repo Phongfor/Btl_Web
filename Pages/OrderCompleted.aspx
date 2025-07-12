@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <uc:Header ID="Header1" runat="server" />
+    <uc:Header ID="Header" runat="server" />
     <main>
         <section class="order-completed">
             <h1>Order Completed</h1>
@@ -26,6 +26,6 @@
                 <img id="imgPure" src="../Assets/Images/nhat.png" alt="Pure" />
         </section>
     </main>
-    <uc:Footer ID="Footer1" runat="server" />
+    <uc:Footer ID="Footer" runat="server" />
 </body>
 </html>

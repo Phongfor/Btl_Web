@@ -15,6 +15,15 @@ namespace WebApplication
     {
 
         /// <summary>
+        /// Header control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Btl_Web.Pages.Header Header;
+
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -22,15 +31,6 @@ namespace WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// Header1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Btl_Web.Pages.Header Header1;
 
         /// <summary>
         /// CartRepeater control.
@@ -123,12 +123,12 @@ namespace WebApplication
         protected global::System.Web.UI.WebControls.Button CalculateShippingBtn;
 
         /// <summary>
-        /// Footer1 control.
+        /// Footer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Btl_Web.Pages.Footer Footer1;
+        protected global::Btl_Web.Pages.Footer Footer;
     }
 }

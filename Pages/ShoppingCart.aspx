@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="WebApplication.ShoppingCart" %>
+
 <%@ Register Src="Header.ascx" TagName="Header" TagPrefix="uc" %>
 <%@ Register Src="Footer.ascx" TagName="Footer" TagPrefix="uc" %>
 
@@ -8,16 +9,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="../Assets/CSS/Header.css" />
-    <link rel="stylesheet" href="../Assets/CSS/Footer.css" />
     <link rel="stylesheet" href="../Assets/CSS/ShoppingCart.css" />
 </head>
 <body>
+    <%-- Header --%>
+    <uc:Header ID="Header" runat="server" />
+
     <form id="form1" runat="server">
-        <%-- Header --%>
-        <uc:Header ID="Header1" runat="server" />
-
-
         <div class="container">
             <div class="header">
                 <h1>Shopping Cart</h1>
@@ -143,9 +141,9 @@
                 </div>
             </div>
         </div>
-        <%-- Footer --%>
-        <uc:Footer ID="Footer1" runat="server" />
     </form>
+    <%-- Footer --%>
+    <uc:Footer ID="Footer" runat="server" />
 
     <script type="text/javascript">
         function updateQuantityClient(button, change) {

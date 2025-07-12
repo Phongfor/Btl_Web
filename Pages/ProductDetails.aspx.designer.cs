@@ -15,6 +15,15 @@ namespace Btl_Web.Pages
     {
 
         /// <summary>
+        /// Header control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Btl_Web.Pages.Header Header;
+
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -94,5 +103,14 @@ namespace Btl_Web.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl productDescription;
+
+        /// <summary>
+        /// Footer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Btl_Web.Pages.Footer Footer;
     }
 }
