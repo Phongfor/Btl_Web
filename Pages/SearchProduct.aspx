@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../Assets/CSS/Header.css" />
     <link rel="stylesheet" href="../Assets/CSS/SearchProduct.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
 </head>
 <body>
 
@@ -26,13 +27,13 @@
             <div class="product-search-box">
                 <div class="product-search-row">
                     <div class="product-search-input-wrapper">
-                        <input type="text" placeholder="Nhập tên sản phẩm, từ khóa..." />
-                        <button class="product-search-icon-btn">
+                        <input type="text" placeholder="Nhập tên sản phẩm, từ khóa..." id="searchInputPage"/>
+                        <button class="product-search-icon-btn" >
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
-                
-                    <button class="product-search-button">
+
+                    <button class="product-search-button" id="searchButtonPage">
                         <i class="fas fa-search"></i>Tìm kiếm
                     </button>
                 </div>
@@ -46,35 +47,16 @@
             </div>
         </section>
 
-     
+
 
         <!-- Products Section -->
         <section class="products-section">
-            <div class="products-grid">
-                <!-- Product items sẽ load ở đây -->
-            </div>
-
-            <!-- Loading Skeleton -->
-            <div class="products-grid">
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-            </div>
-
-            <!-- Pagination -->
-            <nav class="pagination">
-                <button><i class="fas fa-chevron-left"></i></button>
-                <button class="active">1</button>
-                <button>2</button>
-                <button>3</button>
-                <span>...</span>
-                <button>8</button>
-                <button><i class="fas fa-chevron-right"></i></button>
-            </nav>
+            <div class="product-grid" id="productsGrid">
+               
+            </div>            
         </section>
 
     </main>
-
+    <script src="../Scripts/SearchProduct.js"></script>
 </body>
 </html>

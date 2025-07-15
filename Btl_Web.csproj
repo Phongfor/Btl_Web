@@ -113,10 +113,12 @@
     <Content Include="Assets\CSS\Register.css" />
     <Content Include="Pages\ShoppingCart.aspx" />
     <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\SearchProduct.js" />
     <Content Include="Scripts\Shoplist.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class\Connection.cs" />
     <Compile Include="Pages\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
