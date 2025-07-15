@@ -123,3 +123,9 @@ main {
         padding: 30px 20px;
     }
 }
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+    text-align: center;
+}

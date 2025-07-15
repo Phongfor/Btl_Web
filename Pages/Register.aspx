@@ -35,6 +35,6 @@
         </main>
 
     <uc:Footer ID="Footer" runat="server" />
-   
+    <script src="../Scripts/Register.js"></script>
 </body>
 </html>

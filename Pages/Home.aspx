@@ -7,8 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="../Assets/CSS/Footer.css"/>
-    <link rel="stylesheet" href="../Assets/CSS/Header.css"/>
+   
     <link rel="stylesheet" href="../Assets/CSS/Home.css"/>
     
   <link rel="stylesheet" href="../Assets/CSS/Home.css?v=123" />
@@ -37,25 +36,25 @@
             <h2>Featured Products</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <img src="../Assets/Images/sp1.png" alt="Chair 1" />
+                    <img src="../Assets/Images/sp6.png" alt="Chair 1" />
                     <h4>Cantilever chair</h4>
                     <p>Code - Y523201</p>
                     <p>$42.00</p>
                 </div>
                 <div class="feature-card">
-                    <img src="../Assets/Images/sp2.png" alt="Chair 2" />
+                    <img src="../Assets/Images/sp3.png" alt="Chair 2" />
                     <h4>Cantilever chair</h4>
                     <p>Code - Y523201</p>
                     <p>$42.00</p>
                 </div>
                 <div class="feature-card">
-                    <img src="../Assets/Images/sp1.png" alt="Chair 3" />
+                    <img src="../Assets/Images/sp4.png" alt="Chair 3" />
                     <h4>Cantilever chair</h4>
                     <p>Code - Y523201</p>
                     <p>$42.00</p>
                 </div>
                 <div class="feature-card">
-                    <img src="../Assets/Images/sp2.png" alt="Chair 4" />
+                    <img src="../Assets/Images/sp5.png" alt="Chair 4" />
                     <h4>Cantilever chair</h4>
                     <p>Code - Y523201</p>
                     <p>$42.00</p>

@@ -119,7 +119,7 @@ c72 0 87 -58 29 -116 -19 -19 -35 -42 -35 -51 0 -26 40 -83 70 -98 51 -26 64
             <li><a href="Shoplist.aspx">Products</a></li>
             <li><a href="AboutUs.aspx">About us</a></li>
             <li><a href="ShoppingCart.aspx">Shop</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a href="ContactUs.aspx">Contact us</a></li>
         </ul>
     </nav>
     <div class="search-cart">

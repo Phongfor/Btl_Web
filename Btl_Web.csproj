@@ -68,13 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\CSS\AboutUs.css" />
-
     <Content Include="Assets\CSS\ContactUs.css" />
     <Content Include="Assets\Images\Contract.png" />
+    <Content Include="Scripts\Login.js" />
     <Content Include="Pages\ContactUs.aspx" />
-
     <Content Include="Assets\CSS\SearchProduct.css" />
-
     <Content Include="Pages\AboutUs.aspx" />
     <Content Include="Assets\CSS\Footer.css" />
     <Content Include="Assets\CSS\Header.css" />
@@ -118,6 +116,7 @@
     <Content Include="Pages\Register.aspx" />
     <Content Include="Assets\CSS\Register.css" />
     <Content Include="Pages\ShoppingCart.aspx" />
+    <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\Shoplist.js" />
     <Content Include="Web.config" />

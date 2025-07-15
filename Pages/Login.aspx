@@ -32,6 +32,8 @@
                 <asp:TextBox ID="txtPassword" runat="server" CssClass="input-box" Placeholder="Password" TextMode="Password"></asp:TextBox>
 
                 <a href="#" class="forgot-password">Forgot your password?</a>
+                <asp:Label ID="lblMessage" runat="server" CssClass="message" />
+
 
                 <asp:Button ID="btnLogin" runat="server" Text="Sign In" CssClass="login-button" OnClick="btnLogin_Click" />
 

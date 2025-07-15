@@ -9,10 +9,7 @@ namespace Btl_Web
 {
     public partial class Login : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            // Không xử lý đăng nhập ở đây!
-        }
+        protected void Page_Load(object sender, EventArgs e) { }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
@@ -24,7 +21,8 @@ namespace Btl_Web
 
             if (userList == null || userList.Count == 0)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Không có người dùng nào được lưu.');", true);
+                lblMessage.Text = "Không có người dùng nào được lưu.";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
                 return;
             }
 
@@ -34,7 +32,6 @@ namespace Btl_Web
 
             if (user != null)
             {
-                // Lưu thông tin user vào session
                 Session["email"] = user.Email;
                 Session["fullname"] = user.FullName;
                 Session["address"] = user.Adress;
@@ -43,8 +40,8 @@ namespace Btl_Web
             }
             else
             {
-                // Thông báo lỗi
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Email hoặc mật khẩu không đúng.');", true);
+                lblMessage.Text = "Email hoặc mật khẩu không đúng.";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
             }
         }
     }
