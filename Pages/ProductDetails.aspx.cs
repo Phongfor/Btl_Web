@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,10 +14,9 @@ namespace Btl_Web.Pages
         {
             if (!IsPostBack)
             {
-                var products = (List<Product>)Application["Products"];
-                int id = int.Parse(Request.QueryString["id"]); 
+                int id = int.Parse(Request.QueryString["id"]);
 
-                var product = products.FirstOrDefault(p => p.Id == id);
+                var product = GetProductById(id);
                 if (product != null && product.Images.Count >= 4)
                 {
                     mainImage.Src = product.Images[0];
@@ -31,6 +31,66 @@ namespace Btl_Web.Pages
                 }
             }
         }
+
+        //Lấy thông tin sản phẩm từ Shoplist
+        private Product GetProductById(int productId)
+        {
+            Product product = null;
+        
+            using (SqlConnection conn = Connection.GetSqlConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+            SELECT p.product_id, p.namePro, p.price, p.discount, c.namecatalog, p.brand,p.description
+            FROM product p
+            JOIN tblcatalog c ON p.catalog_id = c.catalog_id          
+            WHERE p.product_id = @product_id";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@product_id", productId);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            product = new Product
+                            {
+                                Id = reader.GetInt32(reader.GetOrdinal("product_id")),
+                                Name = reader.GetString(reader.GetOrdinal("namePro")),
+                                Price = (double)reader.GetDecimal(reader.GetOrdinal("price")),
+                                OldPrice = (double)(reader.GetDecimal(reader.GetOrdinal("price")) + reader.GetDecimal(reader.GetOrdinal("discount"))),
+                                Description = reader.GetString(reader.GetOrdinal("description")),
+                                Brand = reader.GetString(reader.GetOrdinal("brand")),
+                                Category = reader.GetString(reader.GetOrdinal("namecatalog")),
+                                Images = new List<string>()
+                            };
+                        }
+                    }
+                }
+
+                // Lấy images
+                if (product != null)
+                {
+                    string sqlImg = "SELECT image_link FROM product_images WHERE product_id = @product_id";
+                    using (SqlCommand cmdImg = new SqlCommand(sqlImg, conn))
+                    {
+                        cmdImg.Parameters.AddWithValue("@product_id", productId);
+                        using (SqlDataReader imgReader = cmdImg.ExecuteReader())
+                        {
+                            while (imgReader.Read())
+                            {
+                                product.Images.Add(imgReader.GetString(0));
+                            }
+                        }
+                    }
+                }
+            }
+
+            return product;
+        }
+
 
         protected void btnAddToCart_Click()
         {

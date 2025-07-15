@@ -118,10 +118,12 @@
     <Content Include="Pages\ShoppingCart.aspx" />
     <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\SearchProduct.js" />
     <Content Include="Scripts\Shoplist.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="Pages\ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +131,9 @@
     <Compile Include="Pages\ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
+
+    <Compile Include="class\Connection.cs" />
+
     <Compile Include="Pages\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
