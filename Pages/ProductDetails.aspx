@@ -26,11 +26,11 @@
 
         <div class="product-container">
             <div class="gallery">
-                <div class="thumbnails">
+                <%--<div class="thumbnails">
                     <img id="thumb1" runat="server" src="../Assets/Images/sp1.png" alt="Thumbnail 1" />
                     <img id="thumb2" runat="server" src="../Assets/Images/sp1.png" alt="Thumbnail 2" />
                     <img id="thumb3" runat="server" src="../Assets/Images/sp1.png" alt="Thumbnail 3" />
-                </div>
+                </div>--%>
                 <div class="main-image">
                     <img id="mainImage" runat="server" src="../Assets/Images/sp1.png" alt="Main Product Image" />
                 </div>
@@ -99,41 +99,7 @@
         <div class="related-products">
             <h2>Related Products</h2>
             <div class="product-list">
-                <div class="product-card">
-                    <img src="../Assets/Images/sp2.png" alt="Mens Fashion Wear">
-                    <div class="desc">
-                        <h4>Mens Fashion Wear</h4>
-                        <p>$43.00</p>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="../Assets/Images/sp3.png" alt="Women's Fashion">
-                    <div class="desc">
-                        <h4>Women's Fashion</h4>
-                        <p>$67.00</p>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="../Assets/Images/sp4.png" alt="Wok Dummy Fashion">
-                    <div class="desc">
-                        <h4>Wok Dummy Fashion</h4>
-                        <p>$67.00</p>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="../Assets/Images/sp5.png" alt="Top Wall Digital Clock">
-                    <div class="desc">
-                        <h4>Top Wall Digital Clock</h4>
-                        <p>$31.00</p>
-                        <div class="stars">★★★★☆</div>
-                    </div>
-                </div>
+                <asp:Literal ID="litRelatedProducts" runat="server"></asp:Literal>
             </div>
         </div>
 
