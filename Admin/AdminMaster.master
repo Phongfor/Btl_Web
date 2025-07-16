@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="Btl_Web.Admin.AdminMaster" %>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0; top: 0; bottom: 0;
+            width: 220px;
+            background: #34495e;
+            color: #ecf0f1;
+            padding-top: 60px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar a {
+            display: block;
+            color: #ecf0f1;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background: #2c3e50;
+        }
+        .main {
+            margin-top: 50px;
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .main h1 {
+            margin-top: 50px;
+        }
+
+        .navbar {
+            position: fixed;
+            left: 220px; right: 0; top: 0;
+            height: 60px;
+            background: #2980b9;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+     <form id="form1" runat="server">
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <a href="Dashboard.aspx">Dashboard</a>
+            <a href="Order.aspx">Đơn Hàng</a>
+            <a href="Products.aspx">Sản Phẩm</a>
+            <a href="../Pages/Login.aspx">Đăng Xuất</a>
+        </div>
+        <div class="navbar">
+            Xin chào, Admin!
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
