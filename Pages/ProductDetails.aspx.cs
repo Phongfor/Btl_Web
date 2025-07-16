@@ -33,6 +33,7 @@ namespace Btl_Web.Pages
                 foreach (var rp in relatedProducts)
                 {
                     html += $@"
+
                 <a href='ProductDetails.aspx?id={rp.Id}' class='product-card'>
                     <img src='{rp.Images[0]}' alt='{rp.Name}'>
                     <div class='desc'>
@@ -41,6 +42,7 @@ namespace Btl_Web.Pages
                         <div class='stars'>★★★★★</div>
                     </div>
                 </a>";
+
                 }
                 litRelatedProducts.Text = html;
             }
@@ -158,6 +160,48 @@ namespace Btl_Web.Pages
                             {
                                 product.Images.Add(imgReader.GetString(0));
                             }
+                        }
+                    }
+                }
+            }
+
+            return relatedProducts;
+        }
+
+
+
+        private List<Product> GetRelatedProducts(string brand, int currentProductId)
+        {
+            var relatedProducts = new List<Product>();
+
+            using (SqlConnection conn = Connection.GetSqlConnection())
+            {
+                conn.Open();
+                string sql = @"
+            SELECT TOP 4 p.product_id, p.namePro, p.price, p.discount, pi.image_link
+            FROM product p
+            JOIN product_images pi ON p.product_id = pi.product_id
+            WHERE p.brand = @brand AND p.product_id != @currentId
+            GROUP BY p.product_id, p.namePro, p.price, p.discount, pi.image_link";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@brand", brand);
+                    cmd.Parameters.AddWithValue("@currentId", currentProductId);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var p = new Product
+                            {
+                                Id = reader.GetInt32(reader.GetOrdinal("product_id")),
+                                Name = reader.GetString(reader.GetOrdinal("namePro")),
+                                Price = (double)reader.GetDecimal(reader.GetOrdinal("price")),
+                                OldPrice = (double)(reader.GetDecimal(reader.GetOrdinal("price")) + reader.GetDecimal(reader.GetOrdinal("discount"))),
+                                Images = new List<string> { reader.GetString(reader.GetOrdinal("image_link")) }
+                            };
+                            relatedProducts.Add(p);
                         }
                     }
                 }

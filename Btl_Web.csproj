@@ -127,6 +127,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="Admin\AdminMaster.master.cs">
       <DependentUpon>AdminMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -155,6 +156,7 @@
     <Compile Include="Admin\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Pages\ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,9 +164,7 @@
     <Compile Include="Pages\ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
-
     <Compile Include="class\Connection.cs" />
-
     <Compile Include="Pages\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,7 +254,7 @@
     <Compile Include="Pages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
+    <Compile Include="class\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

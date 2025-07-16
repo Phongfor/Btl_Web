@@ -55,9 +55,7 @@
     </section>
 </main>
 
-
      <uc:Footer ID="Footer" runat="server" />
     
-   
 </body>
 </html>
