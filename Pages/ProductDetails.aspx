@@ -69,7 +69,6 @@
         </div>
 
 
-
         <div class="product-tabs">
             <ul class="tabs">
                 <li class="active">Description</li>
@@ -98,8 +97,11 @@
 
         <div class="related-products">
             <h2>Related Products</h2>
+            
+
             <div class="product-list">
-                <div class="product-card">
+                <asp:Literal ID="litRelatedProducts" runat="server"></asp:Literal>
+                <%--<div class="product-card">
                     <img src="../Assets/Images/sp2.png" alt="Mens Fashion Wear">
                     <div class="desc">
                         <h4>Mens Fashion Wear</h4>
@@ -133,7 +135,7 @@
                         <p>$31.00</p>
                         <div class="stars">★★★★☆</div>
                     </div>
-                </div>
+                </div>--%>
             </div>
         </div>
 
