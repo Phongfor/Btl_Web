@@ -215,8 +215,28 @@
         margin-bottom: 30px;
     }
 
+    .related-products .product-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+        .related-products .product-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .related-products .product-card img {
+            transition: opacity 0.3s ease;
+        }
+
+        .related-products .product-card:hover img {
+            opacity: 0.9;
+        }
+
+
 .product-list {
     display: flex;
+    justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -245,6 +265,19 @@
         color: #444;
         margin: 0 0 5px;
     }
+
+.related-products .product-list a.product-card {
+    display: inline-block;
+    text-decoration: none; 
+    color: inherit; 
+}
+
+    .related-products .product-list a.product-card h4,
+    .related-products .product-list a.product-card p {
+        text-decoration: none;
+        color: inherit;
+    }
+
 
 .stars {
     color: #fbbf24;
