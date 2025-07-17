@@ -51,6 +51,7 @@ body {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .cart-items {
@@ -328,7 +329,6 @@ body {
         transform: translateY(-1px);
     }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .cart-container {
         flex-direction: column;
@@ -409,7 +409,7 @@ body {
     }
 }
 
-/* Animation for smooth transitions */
+
 .cart-item {
     transition: all 0.3s ease;
 }
@@ -419,7 +419,6 @@ body {
         transform: translateY(-2px);
     }
 
-/* Loading state */
 .loading {
     opacity: 0.7;
     pointer-events: none;

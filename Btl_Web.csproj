@@ -73,7 +73,9 @@
     <Content Include="Admin\Products.aspx" />
     <Content Include="Assets\CSS\AboutUs.css" />
     <Content Include="Assets\CSS\ContactUs.css" />
+    <Content Include="Assets\CSS\ShoppingCart.css" />
     <Content Include="Assets\Images\Contract.png" />
+    <Content Include="Pages\ShoppingCart.aspx" />
     <Content Include="Scripts\Login.js" />
     <Content Include="Pages\ContactUs.aspx" />
     <Content Include="Assets\CSS\SearchProduct.css" />
@@ -119,7 +121,6 @@
     <Content Include="Pages\Shoplist.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Assets\CSS\Register.css" />
-    <Content Include="Pages\ShoppingCart.aspx" />
     <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\SearchProduct.js" />
@@ -127,7 +128,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="Admin\AdminMaster.master.cs">
       <DependentUpon>AdminMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,7 +156,7 @@
     <Compile Include="Admin\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
-
+    <Compile Include="class\CartItem.cs" />
     <Compile Include="Pages\ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -225,6 +225,13 @@
     <Compile Include="Pages\ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SearchProduct.aspx.cs">
       <DependentUpon>SearchProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,13 +245,6 @@
     </Compile>
     <Compile Include="Pages\Shoplist.aspx.designer.cs">
       <DependentUpon>Shoplist.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ShoppingCart.aspx.cs">
-      <DependentUpon>ShoppingCart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\ShoppingCart.aspx.designer.cs">
-      <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\Register.aspx.cs">

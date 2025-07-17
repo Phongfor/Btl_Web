@@ -78,6 +78,15 @@ namespace Btl_Web.Pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl productDescription;
 
         /// <summary>
+        /// btnAddToCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddToCart;
+
+        /// <summary>
         /// litRelatedProducts control.
         /// </summary>
         /// <remarks>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="WebApplication.ShoppingCart" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="Btl_Web.Pages.ShoppingCart" %>
 
 <%@ Register Src="Header.ascx" TagName="Header" TagPrefix="uc" %>
 <%@ Register Src="Footer.ascx" TagName="Footer" TagPrefix="uc" %>
@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="../Assets/CSS/ShoppingCart.css" />
 </head>
 <body>
-    <%-- Header --%>
     <uc:Header ID="Header" runat="server" />
-
     <form id="form1" runat="server">
         <div class="container">
             <div class="header">
@@ -26,14 +24,15 @@
 
             <div class="cart-container">
                 <div class="cart-items">
-                    <div class="cart-header">
-                        <div>Product</div>
-                        <div>Price</div>
-                        <div>Quantity</div>
-                        <div>Total</div>
-                    </div>
-
                     <asp:Repeater ID="CartRepeater" runat="server">
+                        <HeaderTemplate>
+                            <div class="cart-header">
+                                <div>Product</div>
+                                <div>Price</div>
+                                <div>Quantity</div>
+                                <div>Total</div>
+                            </div>
+                        </HeaderTemplate>
                         <ItemTemplate>
                             <div class="cart-item">
                                 <div class="product-info">
@@ -44,7 +43,7 @@
                                     </div>
                                     <div class="product-details">
                                         <h3><%# Eval("ProductName") %></h3>
-                                        <p>Color: <%# Eval("Color") %></p>
+                                        <p>Color: <%# Eval("Color") ?? "N/A" %></p>
                                     </div>
                                 </div>
                                 <div class="price">$<%# Eval("Price", "{0:F2}") %></div>
@@ -82,106 +81,72 @@
 
                 <div class="cart-summary">
                     <div class="summary-title">Cart Totals</div>
-
                     <div class="summary-row">
                         <span class="summary-label">Subtotal:</span>
                         <span class="summary-value">
                             <asp:Label ID="SubtotalLabel" runat="server" Text="$0.00" />
                         </span>
                     </div>
-
                     <div class="summary-row">
                         <span class="summary-label">Totals:</span>
                         <span class="summary-value">
                             <asp:Label ID="TotalLabel" runat="server" Text="$0.00" />
                         </span>
                     </div>
-
                     <asp:Button ID="CheckoutBtn" runat="server"
                         CssClass="checkout-btn"
                         Text="Proceed to Checkout"
                         OnClick="Checkout_Click" />
-
                     <div class="continue-shopping">
-                        <a href="Products.aspx">← Continue Shopping</a>
-                    </div>
-
-                    <div class="summary-title" style="margin-top: 30px;">Calculate Shipping</div>
-
-                    <div class="shipping-form">
-                        <div class="form-group">
-                            <label for="CountryDropDown">Country</label>
-                            <asp:DropDownList ID="CountryDropDown" runat="server" CssClass="form-control">
-                                <asp:ListItem Value="BD">Bangladesh</asp:ListItem>
-                                <asp:ListItem Value="US">United States</asp:ListItem>
-                                <asp:ListItem Value="CA">Canada</asp:ListItem>
-                                <asp:ListItem Value="UK">United Kingdom</asp:ListItem>
-                            </asp:DropDownList>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="StateTextBox">State/Province</label>
-                            <asp:TextBox ID="StateTextBox" runat="server"
-                                CssClass="form-control"
-                                placeholder="Dhaka" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="ZipTextBox">Postal Code</label>
-                            <asp:TextBox ID="ZipTextBox" runat="server"
-                                CssClass="form-control"
-                                placeholder="Postal Code" />
-                        </div>
-
-                        <asp:Button ID="CalculateShippingBtn" runat="server"
-                            CssClass="calculate-btn"
-                            Text="Calculate Shipping"
-                            OnClick="CalculateShipping_Click" />
+                        <a href="Shoplist.aspx">← Continue Shopping</a>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-    <%-- Footer --%>
     <uc:Footer ID="Footer" runat="server" />
 
     <script type="text/javascript">
         function updateQuantityClient(button, change) {
-            const quantitySpan = button.parentElement.querySelector('.quantity');
-            const currentQuantity = parseInt(quantitySpan.textContent);
-            const newQuantity = Math.max(1, currentQuantity + change);
+            try {
+                const quantitySpan = button.parentElement.querySelector('.quantity');
+                const currentQuantity = parseInt(quantitySpan.textContent);
+                const newQuantity = Math.max(1, currentQuantity + change);
 
-            quantitySpan.textContent = newQuantity;
+                quantitySpan.textContent = newQuantity;
 
-            // Update total for this item
-            const cartItem = button.closest('.cart-item');
-            const priceElement = cartItem.querySelector('.price');
-            const totalElement = cartItem.querySelector('.total');
-            const price = parseFloat(priceElement.textContent.replace('$', ''));
-            const newTotal = price * newQuantity;
+                const cartItem = button.closest('.cart-item');
+                const priceElement = cartItem.querySelector('.price');
+                const totalElement = cartItem.querySelector('.total');
+                const price = parseFloat(priceElement.textContent.replace('$', ''));
+                const newTotal = price * newQuantity;
 
-            totalElement.textContent = '$' + newTotal.toFixed(2);
+                totalElement.textContent = '$' + newTotal.toFixed(2);
 
-            // Update cart totals
-            updateCartTotals();
+                updateCartTotals();
+            } catch (error) {
+                console.error('Error updating quantity:', error);
+            }
         }
 
         function updateCartTotals() {
-            const totalElements = document.querySelectorAll('.cart-item .total');
-            let subtotal = 0;
+            try {
+                const totalElements = document.querySelectorAll('.cart-item .total');
+                let subtotal = 0;
+                totalElements.forEach(element => {
+                    subtotal += parseFloat(element.textContent.replace('$', ''));
+                });
 
-            totalElements.forEach(element => {
-                subtotal += parseFloat(element.textContent.replace('$', ''));
-            });
+                const subtotalLabel = document.querySelector('#<%= SubtotalLabel.ClientID %>');
+                const totalLabel = document.querySelector('#<%= TotalLabel.ClientID %>');
 
-            const subtotalLabel = document.querySelector('#<%= SubtotalLabel.ClientID %>');
-            const totalLabel = document.querySelector('#<%= TotalLabel.ClientID %>');
-
-            if (subtotalLabel) subtotalLabel.textContent = '$' + subtotal.toFixed(2);
-            if (totalLabel) totalLabel.textContent = '$' + subtotal.toFixed(2);
+                if (subtotalLabel) subtotalLabel.textContent = '$' + subtotal.toFixed(2);
+                if (totalLabel) totalLabel.textContent = '$' + subtotal.toFixed(2);
+            } catch (error) {
+                console.error('Error updating cart totals:', error);
+            }
         }
 
-        // Page load event
         document.addEventListener('DOMContentLoaded', function () {
             updateCartTotals();
         });

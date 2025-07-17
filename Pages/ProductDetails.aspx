@@ -56,9 +56,10 @@
                 </p>
 
                 <div class="order">
-                    <button class="add-to-cart">Add To Cart</button>
+                    <asp:Button ID="btnAddToCart" runat="server" CssClass="add-to-cart" Text="Add To Cart" OnClick="AddToCart_Click" />
                     <ion-icon name="heart-outline" class="heart-icon"></ion-icon>
                 </div>
+
 
                 <div class="meta">
                     <p><strong>Categories:</strong> Chair</p>
@@ -97,7 +98,7 @@
 
         <div class="related-products">
             <h2>Related Products</h2>
-            
+
 
             <div class="product-list">
                 <asp:Literal ID="litRelatedProducts" runat="server"></asp:Literal>

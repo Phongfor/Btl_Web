@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Btl_Web.Pages.Home" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Btl_Web.Pages.Home" %>
 <%@ Register Src="Header.ascx" TagName="Header" TagPrefix="uc" %>
 <%@ Register Src="Footer.ascx" TagName="Footer" TagPrefix="uc" %>
 

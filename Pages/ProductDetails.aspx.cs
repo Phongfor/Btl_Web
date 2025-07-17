@@ -18,9 +18,9 @@ namespace Btl_Web.Pages
 
                 var product = GetProductById(id);
                 if (product != null && product.Images.Count > 0)
-                {                                                
+                {
                     mainImage.Src = product.Images[0];
-                   
+
                     productName.InnerText = product.Name;
                     productDescription.InnerText = product.Description;
                     newPrice.InnerText = "$" + product.Price.ToString("F2");
@@ -53,7 +53,7 @@ namespace Btl_Web.Pages
         private Product GetProductById(int productId)
         {
             Product product = null;
-        
+
             using (SqlConnection conn = Connection.GetSqlConnection())
             {
                 conn.Open();
@@ -147,7 +147,6 @@ namespace Btl_Web.Pages
                     }
                 }
 
-                // Lấy ảnh cho từng sản phẩm
                 foreach (var product in relatedProducts)
                 {
                     string sqlImg = "SELECT TOP 1 image_link FROM product_images WHERE product_id = @product_id";
@@ -168,16 +167,56 @@ namespace Btl_Web.Pages
             return relatedProducts;
         }
 
-
-
-      
-
-
-
-        protected void btnAddToCart_Click()
+        protected void AddToCart_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrEmpty(Request.QueryString["id"]) || !int.TryParse(Request.QueryString["id"], out int id))
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "error",
+                        "alert('Invalid product ID.');", true);
+                    return;
+                }
 
+                var product = GetProductById(id);
+                if (product == null)
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "error",
+                        "alert('Product not found.');", true);
+                    return;
+                }
+
+
+                List<CartItem> cart = Session["CartItems"] as List<CartItem> ?? new List<CartItem>();
+
+                var existingItem = cart.FirstOrDefault(x => x.ProductId == product.Id);
+                if (existingItem != null)
+                {
+                    existingItem.Quantity += 1;
+                }
+                else
+                {
+                    cart.Add(new CartItem
+                    {
+                        ProductId = product.Id,
+                        ProductName = product.Name,
+                        Price = (decimal)product.Price,
+                        Quantity = 1,
+                        ImageUrl = product.Images.FirstOrDefault() ?? "~/Assets/Images/default.png",
+                        Color = "Default" 
+                    });
+                }
+
+                Session["CartItems"] = cart;
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "addSuccess",
+                    "alert('Đã thêm sản phẩm vào giỏ hàng!');", true);
+            }
+            catch (Exception ex)
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "error",
+                    $"alert('Error adding to cart: {ex.Message}');", true);
+            }
         }
-
     }
 }

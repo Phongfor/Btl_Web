@@ -1,130 +1,121 @@
-﻿body {
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: #fff;
-    color: #2d3748;
-}
-
-main {
-    padding: 20px 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.checkout {
+﻿.checkout-wrapper {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.contact-form, .order-summary {
-    width: 48%;
-    background: #f6f5ff;
+h2 {
+    padding : 20px;
+    text-align: center;
+}
+.form-section{
+    padding-top : 10px;
+}
+
+.checkbox-label {
+    font-size: 12px;
+    display: flex;
+    align-items: center; /* căn dọc */
+    gap: 2px;
+}
+.h3{
+    padding-top : 4px ;
+}
+
+.checkout-left {
+    flex: 2;
+    background-color: #f9f9ff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.checkout-right {
+    flex: 1;
+    background: #fff;
     padding: 20px;
-    border-radius: 4px;
+    border-left: 1px solid #eee;
 }
 
-.contact-form h3, .order-summary h3 {
-    margin-bottom: 15px;
-    font-weight: bold;
+.cart-item left{
+    display: flex;
 }
 
-.contact-form input {
+.cart-item {
+    justify-content: space-between;
+}
+
+.input {
     display: block;
     width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #e2e8f0;
-    border-radius: 4px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.contact-form label {
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+.btn-pink {
+    background-color: #FB2E86;
+    color: white;
+}
+
+.btn-green {
+    background-color: #19D16F;
+    color: white;
+    width: 100%;
+}
+
+.summary-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.summary-value.total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.cart-item {
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin-bottom: 15px;
-    margin-left: 0; /* Đảm bảo label không có margin trái */
-}
-
-    /* Tách input thường */
-    .contact-form input:not([type="checkbox"]) {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid #e2e8f0;
-        border-radius: 4px;
-    }
-
-    /* Checkbox riêng */
-    .contact-form input[type="checkbox"] {
-        width: auto;
-        display: inline-block;
-        margin-right: 5px;
-    }
-
-/* Checkbox line styling */
-.checkbox-label {
-    display: inline-flex; /* Cho phép căn giữa theo chiều dọc */
-    align-items: center; /* Căn giữa checkbox và văn bản */
-    font-size: 13px; /* Nhỏ gọn giống demo */
-    color: #555; /* Tùy chỉnh màu chữ nếu cần */
-    gap: 6px; /* Khoảng cách giữa checkbox và text */
-    margin-bottom: 15px; /* Khoảng cách phía dưới */
-}
-
-    /* Styling for the checkbox itself */
-    .checkbox-label input[type="checkbox"] {
-        width: 14px; /* Thu nhỏ checkbox */
-        height: 14px;
-        accent-color: #22c55e; /* Màu xanh giống bản demo (trình duyệt hiện đại) */
-        margin: 0; /* Xóa khoảng trống mặc định */
-        vertical-align: middle; /* Căn giữa nếu inline */
-    }
-
-
-.contact-form button {
-    background-color: #fb2e86;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.order-summary ul {
-    list-style: none;
-    padding: 0;
+    gap: 15px;
     margin-bottom: 15px;
 }
 
-.order-summary ul li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.cart-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-.order-summary .subtotal, .order-summary .shipping, .order-summary .total {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.order-summary .total {
-    font-weight: bold;
-}
-
-.order-summary button {
-    background-color: #48bb78;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    cursor: pointer;
+.shipping-note {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
 }
