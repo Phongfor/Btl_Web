@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;                                                                                                                      
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Btl_Web.Pages
 {
@@ -12,99 +14,157 @@ namespace Btl_Web.Pages
         {
             if (!IsPostBack)
             {
-                if (string.IsNullOrEmpty(Request.QueryString["id"]) || !int.TryParse(Request.QueryString["id"], out int id))
-                {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "error",
-                        "alert('Invalid product ID.');", true);
-                    Response.Redirect("~/Pages/Products.aspx");
-                    return;
-                }
+                int id = int.Parse(Request.QueryString["id"]);
 
                 var product = GetProductById(id);
-                if (product != null)
+                if (product != null && product.Images.Count > 0)
                 {
-                    mainImage.Src = product.Images.FirstOrDefault() ?? "~/Assets/Images/default.png";
-                    thumb1.Src = product.Images.Skip(1).FirstOrDefault() ?? "~/Assets/Images/default.png";
-                    thumb2.Src = product.Images.Skip(2).FirstOrDefault() ?? "~/Assets/Images/default.png";
-                    thumb3.Src = product.Images.Skip(3).FirstOrDefault() ?? "~/Assets/Images/default.png";
+                    mainImage.Src = product.Images[0];
 
                     productName.InnerText = product.Name;
                     productDescription.InnerText = product.Description;
                     newPrice.InnerText = "$" + product.Price.ToString("F2");
                     oldPrice.InnerText = product.OldPrice > 0 ? "$" + product.OldPrice.ToString("F2") : "";
                 }
-                else
+
+                var relatedProducts = GetRelatedProducts(product.Brand, product.Id);
+
+                string html = "";
+                foreach (var rp in relatedProducts)
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "error",
-                        "alert('Product not found.');", true);
-                    Response.Redirect("~/Pages/Products.aspx");
+                    html += $@"
+
+                <a href='ProductDetails.aspx?id={rp.Id}' class='product-card'>
+                    <img src='{rp.Images[0]}' alt='{rp.Name}'>
+                    <div class='desc'>
+                        <h4>{rp.Name}</h4>
+                        <p>${rp.Price:F2}</p>
+                        <div class='stars'>★★★★★</div>
+                    </div>
+                </a>";
+
                 }
+                litRelatedProducts.Text = html;
             }
         }
 
+
+        //Lấy thông tin sản phẩm từ Shoplist
         private Product GetProductById(int productId)
         {
             Product product = null;
 
-            try
+            using (SqlConnection conn = Connection.GetSqlConnection())
             {
-                using (SqlConnection conn = Connection.GetSqlConnection())
+                conn.Open();
+
+                string sql = @"
+            SELECT p.product_id, p.namePro, p.price, p.discount, c.namecatalog, p.brand,p.description
+            FROM product p
+            JOIN tblcatalog c ON p.catalog_id = c.catalog_id          
+            WHERE p.product_id = @product_id";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    conn.Open();
+                    cmd.Parameters.AddWithValue("@product_id", productId);
 
-                    string sql = @"SELECT p.product_id, p.namePro, p.price, p.discount, c.namecatalog, p.brand, p.description
-                                   FROM product p
-                                   JOIN tblcatalog c ON p.catalog_id = c.catalog_id
-                                   WHERE p.product_id = @product_id";
-
-                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        cmd.Parameters.AddWithValue("@product_id", productId);
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        if (reader.Read())
                         {
-                            if (reader.Read())
+                            product = new Product
                             {
-                                product = new Product
-                                {
-                                    Id = reader.GetInt32(reader.GetOrdinal("product_id")),
-                                    Name = reader.GetString(reader.GetOrdinal("namePro")),
-                                    Price = (double)reader.GetDecimal(reader.GetOrdinal("price")),
-                                    OldPrice = (double)(reader.GetDecimal(reader.GetOrdinal("price")) + reader.GetDecimal(reader.GetOrdinal("discount"))),
-                                    Description = reader.GetString(reader.GetOrdinal("description")),
-                                    Brand = reader.GetString(reader.GetOrdinal("brand")),
-                                    Category = reader.GetString(reader.GetOrdinal("namecatalog")),
-                                    Images = new List<string>()
-                                };
-                            }
+                                Id = reader.GetInt32(reader.GetOrdinal("product_id")),
+                                Name = reader.GetString(reader.GetOrdinal("namePro")),
+                                Price = (double)reader.GetDecimal(reader.GetOrdinal("price")),
+                                OldPrice = (double)(reader.GetDecimal(reader.GetOrdinal("price")) + reader.GetDecimal(reader.GetOrdinal("discount"))),
+                                Description = reader.GetString(reader.GetOrdinal("description")),
+                                Brand = reader.GetString(reader.GetOrdinal("brand")),
+                                Category = reader.GetString(reader.GetOrdinal("namecatalog")),
+                                Images = new List<string>()
+                            };
                         }
                     }
+                }
 
-                    if (product != null)
+                // Lấy images
+                if (product != null)
+                {
+                    string sqlImg = "SELECT image_link FROM product_images WHERE product_id = @product_id";
+                    using (SqlCommand cmdImg = new SqlCommand(sqlImg, conn))
                     {
-                        string sqlImg = "SELECT image_link FROM product_images WHERE product_id = @product_id";
-                        using (SqlCommand cmdImg = new SqlCommand(sqlImg, conn))
+                        cmdImg.Parameters.AddWithValue("@product_id", productId);
+                        using (SqlDataReader imgReader = cmdImg.ExecuteReader())
                         {
-                            cmdImg.Parameters.AddWithValue("@product_id", productId);
-                            using (SqlDataReader imgReader = cmdImg.ExecuteReader())
+                            while (imgReader.Read())
                             {
-                                while (imgReader.Read())
-                                {
-                                    product.Images.Add(imgReader.GetString(0));
-                                }
+                                product.Images.Add(imgReader.GetString(0));
                             }
                         }
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"Error in GetProductById: {ex.Message}");
-                ScriptManager.RegisterStartupScript(this, GetType(), "error",
-                    $"alert('Error loading product: {ex.Message}');", true);
-            }
 
             return product;
+        }
+
+        private List<Product> GetRelatedProducts(string brand, int currentProductId)
+        {
+            List<Product> relatedProducts = new List<Product>();
+
+            using (SqlConnection conn = Connection.GetSqlConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+            SELECT TOP 4 p.product_id, p.namePro, p.price, p.discount, p.brand, c.namecatalog
+            FROM product p
+            JOIN tblcatalog c ON p.catalog_id = c.catalog_id
+            WHERE p.brand = @brand AND p.product_id <> @currentProductId";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@brand", brand);
+                    cmd.Parameters.AddWithValue("@currentProductId", currentProductId);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Product product = new Product
+                            {
+                                Id = reader.GetInt32(reader.GetOrdinal("product_id")),
+                                Name = reader.GetString(reader.GetOrdinal("namePro")),
+                                Price = (double)reader.GetDecimal(reader.GetOrdinal("price")),
+                                OldPrice = (double)(reader.GetDecimal(reader.GetOrdinal("price")) + reader.GetDecimal(reader.GetOrdinal("discount"))),
+                                Brand = reader.GetString(reader.GetOrdinal("brand")),
+                                Category = reader.GetString(reader.GetOrdinal("namecatalog")),
+                                Images = new List<string>()
+                            };
+
+                            relatedProducts.Add(product);
+                        }
+                    }
+                }
+
+                foreach (var product in relatedProducts)
+                {
+                    string sqlImg = "SELECT TOP 1 image_link FROM product_images WHERE product_id = @product_id";
+                    using (SqlCommand cmdImg = new SqlCommand(sqlImg, conn))
+                    {
+                        cmdImg.Parameters.AddWithValue("@product_id", product.Id);
+                        using (SqlDataReader imgReader = cmdImg.ExecuteReader())
+                        {
+                            if (imgReader.Read())
+                            {
+                                product.Images.Add(imgReader.GetString(0));
+                            }
+                        }
+                    }
+                }
+            }
+
+            return relatedProducts;
         }
 
         protected void AddToCart_Click(object sender, EventArgs e)
