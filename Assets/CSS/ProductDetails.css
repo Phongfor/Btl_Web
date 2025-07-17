@@ -215,8 +215,28 @@
         margin-bottom: 30px;
     }
 
+    .related-products .product-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+        .related-products .product-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .related-products .product-card img {
+            transition: opacity 0.3s ease;
+        }
+
+        .related-products .product-card:hover img {
+            opacity: 0.9;
+        }
+
+
 .product-list {
     display: flex;
+    justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -245,6 +265,64 @@
         color: #444;
         margin: 0 0 5px;
     }
+
+
+/* Container Related Products */
+.related-products {
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+    /* Mỗi product card */
+    .related-products .product-card {
+        display: block;
+        width: 200px;
+        text-decoration: none;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.2s, box-shadow 0.2s;
+        background: #fff;
+    }
+
+        .related-products .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        /* Hình ảnh */
+        .related-products .product-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+    /* Phần desc */
+    .related-products .desc {
+        padding: 10px;
+        text-align: center;
+    }
+
+        .related-products .desc h4 {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .related-products .desc p {
+            margin: 0;
+            font-weight: bold;
+            color: #e74c3c; /* Màu giá */
+        }
+
+    .related-products .stars {
+        margin-top: 5px;
+        color: #f1c40f; /* Màu sao */
+        font-size: 14px;
+
+    }
+
 
 .stars {
     color: #fbbf24;
