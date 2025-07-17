@@ -186,6 +186,7 @@ namespace Btl_Web.Pages
                     return;
                 }
 
+
                 List<CartItem> cart = Session["CartItems"] as List<CartItem> ?? new List<CartItem>();
 
                 var existingItem = cart.FirstOrDefault(x => x.ProductId == product.Id);
