@@ -15,6 +15,7 @@
     
 </head>
 <body>
+
     <%-- Header --%>
     <uc:Header ID="Header" runat="server" />
 
@@ -30,82 +31,83 @@
                 <img src="../Assets/Images/imageBanner.png" alt="Pink Chair" />
             </div>
         </div>
+    <!-- ✅ Featured Products -->
+<section class="feature-wrapper">
+    <h2>Featured Products</h2>
+    <div class="feature-grid">
+        <a href="ProductDetails.aspx?id=1" class="feature-card">
+            <img src="../Assets/Images/sp6.png" alt="Chair 1" />
+            <h4>Cantilever chair</h4>
+            <p>Code - Y523201</p>
+            <p>$42.00</p>
+        </a>
+        <a href="ProductDetails.aspx?id=2" class="feature-card">
+            <img src="../Assets/Images/sp3.png" alt="Chair 2" />
+            <h4>Cantilever chair</h4>
+            <p>Code - Y523202</p>
+            <p>$45.00</p>
+        </a>
+        <a href="ProductDetails.aspx?id=3" class="feature-card">
+            <img src="../Assets/Images/sp4.png" alt="Chair 3" />
+            <h4>Cantilever chair</h4>
+            <p>Code - Y523203</p>
+            <p>$40.00</p>
+        </a>
+        <a href="ProductDetails.aspx?id=4" class="feature-card">
+            <img src="../Assets/Images/sp5.png" alt="Chair 4" />
+            <h4>Cantilever chair</h4>
+            <p>Code - Y523204</p>
+            <p>$38.00</p>
+        </a>
+    </div>
+</section>
 
-        <!-- ✅ Featured Products -->
-        <section class="feature-wrapper">
-            <h2>Featured Products</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <img src="../Assets/Images/sp6.png" alt="Chair 1" />
-                    <h4>Cantilever chair</h4>
-                    <p>Code - Y523201</p>
-                    <p>$42.00</p>
-                </div>
-                <div class="feature-card">
-                    <img src="../Assets/Images/sp3.png" alt="Chair 2" />
-                    <h4>Cantilever chair</h4>
-                    <p>Code - Y523201</p>
-                    <p>$42.00</p>
-                </div>
-                <div class="feature-card">
-                    <img src="../Assets/Images/sp4.png" alt="Chair 3" />
-                    <h4>Cantilever chair</h4>
-                    <p>Code - Y523201</p>
-                    <p>$42.00</p>
-                </div>
-                <div class="feature-card">
-                    <img src="../Assets/Images/sp5.png" alt="Chair 4" />
-                    <h4>Cantilever chair</h4>
-                    <p>Code - Y523201</p>
-                    <p>$42.00</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- ✅ Latest Products -->
-        <section class="latest-wrapper">
-            <h2>Latest Products</h2>
-            <div class="latest-categories">
-                <span class="active">New Arrival</span>
-                <span>Best Seller</span>
-                <span>Featured</span>
-                <span>Special Offer</span>
-            </div>
-            <div class="latest-grid">
-                <div class="latest-card">
-                    <img src="../Assets/Images/sp3.png" alt="Red Chair" />
-                    <h4>Comfort Handy Craft</h4>
-                    <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
-                </div>
-                <div class="latest-card">
-                    <img src="../Assets/Images/sp4.png" alt="Yellow Chair" />
-                    <h4>Comfort Handy Craft</h4>
-                    <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
-                </div>
-                <div class="latest-card">
-                    <img src="../Assets/Images/sp5.png" alt="White Chair" />
-                    <h4>Comfort Handy Craft</h4>
-                    <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
-                </div>
-            </div>
-            <div class="latest-grid">
-                <div class="latest-card">
-                    <img src="../Assets/Images/sp6.png" alt="Chair" />
-                    <h4>Comfort Handy Craft</h4>
-                    <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
-                </div>
-                <div class="latest-card">
-                    <img src="../Assets/Images/sp13.png" alt="Chair" />
-                    <h4>Comfort Handy Craft</h4>
-                    <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
-                </div>
-                <div class="latest-card">
-                    <img src="../Assets/Images/sp8.png" alt="Chair" />
-                    <h4>Comfort Handy Craft</h4>
-                    <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
-                </div>
-            </div>
-        </section>
+
+   <!-- ✅ Latest Products -->
+<section class="latest-wrapper">
+    <h2>Latest Products</h2>
+    <div class="latest-categories">
+        <span class="active">New Arrival</span>
+        <span>Best Seller</span>
+        <span>Featured</span>
+        <span>Special Offer</span>
+    </div>
+    <div class="latest-grid">
+        <a href="ProductDetails.aspx?id=5" class="latest-card">
+            <img src="../Assets/Images/sp3.png" alt="Red Chair" />
+            <h4>Comfort Handy Craft</h4>
+            <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
+        </a>
+        <a href="ProductDetails.aspx?id=6" class="latest-card">
+            <img src="../Assets/Images/sp4.png" alt="Yellow Chair" />
+            <h4>Comfort Handy Craft</h4>
+            <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
+        </a>
+        <a href="ProductDetails.aspx?id=7" class="latest-card">
+            <img src="../Assets/Images/sp5.png" alt="White Chair" />
+            <h4>Comfort Handy Craft</h4>
+            <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
+        </a>
+    </div>
+    <div class="latest-grid">
+        <a href="ProductDetails.aspx?id=8" class="latest-card">
+            <img src="../Assets/Images/sp6.png" alt="Chair" />
+            <h4>Comfort Handy Craft</h4>
+            <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
+        </a>
+        <a href="ProductDetails.aspx?id=9" class="latest-card">
+            <img src="../Assets/Images/sp13.png" alt="Chair" />
+            <h4>Comfort Handy Craft</h4>
+            <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
+        </a>
+        <a href="ProductDetails.aspx?id=1" class="latest-card">
+            <img src="../Assets/Images/sp8.png" alt="Chair" />
+            <h4>Comfort Handy Craft</h4>
+            <p><span>$42.00</span> <span class="price-old">$65.00</span></p>
+        </a>
+    </div>
+</section>
     <!-- ✅ What Shopex Offer -->
 <section class="offer-section">
     <h2>What Shopex Offer!</h2>
@@ -149,35 +151,34 @@
         <p class="product-name">B&B Italian Sofa <span>$32.00</span></p>
     </div>
 </section>
-
 <!-- ✅ Trending Products -->
 <section class="trending-products">
     <h2>Trending Products</h2>
     <div class="trending-grid">
-        <div class="trending-card">
+        <a href="ProductDetails.aspx?productId=2" class="trending-card">
             <img src="../Assets/Images/sp10.png" alt="Chair" />
             <h4>Cantilever chair</h4>
             <p><span>$26.00</span> <span class="price-old">$42.00</span></p>
-        </div>
-        <div class="trending-card">
+        </a>
+        <a href="ProductDetails.aspx?productId=2" class="trending-card">
             <img src="../Assets/Images/sp11.png" alt="Chair" />
             <h4>Cantilever chair</h4>
             <p><span>$26.00</span> <span class="price-old">$42.00</span></p>
-        </div>
-        <div class="trending-card">
+        </a>
+        <a href="ProductDetails.aspx?productId=3" class="trending-card">
             <img src="../Assets/Images/sp12.png" alt="Chair" />
             <h4>Cantilever chair</h4>
             <p><span>$26.00</span> <span class="price-old">$42.00</span></p>
-        </div>
-        <div class="trending-card">
+        </a>
+        <a href="ProductDetails.aspx?productId=4" class="trending-card">
             <img src="../Assets/Images/sp7.png" alt="Chair" />
             <h4>Cantilever chair</h4>
             <p><span>$26.00</span> <span class="price-old">$42.00</span></p>
-        </div>
+        </a>
     </div>
 </section>
 
-
+      <script src="../Scripts/Home.js"></script>
 
   
     <%-- Footer --%>

@@ -8,7 +8,7 @@ namespace Btl_Web
 {
     public class Connection
     {
-        private static String strCon = @"Data Source=DESKTOP-KRN39IB;Initial Catalog=DB_Web;Integrated Security=True";
+        private static String strCon = @"Data Source=DESKTOP-5710GSS\SERVER1;Initial Catalog=BTL_Web;Integrated Security=True";
 
         public static SqlConnection GetSqlConnection()
         {

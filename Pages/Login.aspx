@@ -44,7 +44,7 @@
 
    <uc:Footer ID="Footer" runat="server" />
    
-
+     <script src="../Scripts/Login.js"></script>
    
 </body>
 </html>
