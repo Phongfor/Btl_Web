@@ -10,7 +10,8 @@
     <div class="right">
         <span>English ▾</span>
         <span>USD ▾</span>
-        <span>Login ▾</span>
+      <a href="Login.aspx" style="text-decoration: none; color: inherit;">Login ▾</a>
+
         <span>Wishlist ♡</span>
         <span>
             <a href="ShoppingCart.aspx">
