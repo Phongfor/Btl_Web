@@ -75,6 +75,8 @@
     <Content Include="Assets\CSS\ContactUs.css" />
     <Content Include="Assets\CSS\ShoppingCart.css" />
     <Content Include="Assets\Images\Contract.png" />
+    <Content Include="Assets\Images\sp1.png" />
+    <Content Include="Assets\Images\sp2a.png" />
     <Content Include="Pages\ShoppingCart.aspx" />
     <Content Include="Scripts\Login.js" />
     <Content Include="Pages\ContactUs.aspx" />
@@ -98,7 +100,7 @@
     <Content Include="Assets\Images\DONGHO.png" />
     <Content Include="Assets\Images\imageBanner.png" />
     <Content Include="Assets\Images\nhat.png" />
-    <Content Include="Assets\Images\sp1.png" />
+    <Content Include="Assets\Images\sp1a.png" />
     <Content Include="Assets\Images\sp2.png" />
     <Content Include="Assets\Images\sp3.png" />
     <Content Include="Assets\Images\sp4.png" />

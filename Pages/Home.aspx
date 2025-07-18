@@ -35,29 +35,29 @@
 <section class="feature-wrapper">
     <h2>Featured Products</h2>
     <div class="feature-grid">
-        <a href="ProductDetails.aspx?id=1" class="feature-card">
+        <a href="ProductDetails.aspx?id=6" class="feature-card">
             <img src="../Assets/Images/sp6.png" alt="Chair 1" />
-            <h4>Cantilever chair</h4>
+            <h4>Dictum morbi</h4>
             <p>Code - Y523201</p>
-            <p>$42.00</p>
+            <p>$26,00</p>
         </a>
-        <a href="ProductDetails.aspx?id=2" class="feature-card">
-            <img src="../Assets/Images/sp3.png" alt="Chair 2" />
-            <h4>Cantilever chair</h4>
+        <a href="ProductDetails.aspx?id=8" class="feature-card">
+            <img src="../Assets/Images/sp8.png" alt="Chair 2" />
+            <h4>Sodales sit</h4>
             <p>Code - Y523202</p>
-            <p>$45.00</p>
+            <p>$32,00 </p>
         </a>
         <a href="ProductDetails.aspx?id=3" class="feature-card">
-            <img src="../Assets/Images/sp4.png" alt="Chair 3" />
-            <h4>Cantilever chair</h4>
+            <img src="../Assets/Images/sp3.png" alt="Chair 3" />
+            <h4>Dictum morbi</h4>
             <p>Code - Y523203</p>
-            <p>$40.00</p>
+            <p>$725,00 </p>
         </a>
         <a href="ProductDetails.aspx?id=4" class="feature-card">
-            <img src="../Assets/Images/sp5.png" alt="Chair 4" />
-            <h4>Cantilever chair</h4>
+            <img src="../Assets/Images/sp4.png" alt="Chair 4" />
+            <h4>Sodales sit</h4>
             <p>Code - Y523204</p>
-            <p>$38.00</p>
+            <p>$232,00</p>
         </a>
     </div>
 </section>
